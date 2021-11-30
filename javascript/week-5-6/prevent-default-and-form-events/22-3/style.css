@@ -26,7 +26,8 @@ body {
     font: 400 1.5em/1.5em serif;
 }
 
-.input-message {
+.input-message,
+.reload-message {
     font-weight: 600;
     color: black;
 }
@@ -37,4 +38,22 @@ body {
 
 .input-message--incorrect {
     color: red;
+}
+
+button {
+    font-size: 0.8em;
+    margin: 0 auto;
+    width: max-content;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 10%;
+    background: #fff;
+    cursor: pointer;
+
+    /* transform: translateX(48vw); */
+}
+
+.reload-message,
+.reload-button {
+    display: none;
 }
