@@ -17,8 +17,23 @@
             <input placeholder="Your name" type="text" required autofocus>
             <input placeholder="Your age" type="number" required>
             <input placeholder="Your email address" type="email" required>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button name="submit" type="submit">Submit</button>
         </form>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="user-name">&nbsp; </div>
+            <div id="user-age">&nbsp; </div>
+            <div id="user-email">&nbsp; </div>
+            <div id="user-message">Would you like to send the above information?</div>
+            <div class="modal-buttons">
+                <button id="confirm-btn" type="button">Confirm</button>
+                <button id="cancel-btn" type="button">Change</button>
+            </div>
+        </div>
+
     </div>
 </body>
 
