@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <style>
+        .container {
+            font-size: 44px;
+            margin: 20px;
+            padding: 10px;
+            width: 230px;
+            text-align: center;
+        }
+
+        #clock {
+            border: 5px solid red;
+            border-radius: 12px;
+        }
+
+        .btn-container button {
+            font-size: 35px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock" class="container"></div>
+    <div class="btn-container container">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+
+
+    <script type="text/javascript">
+        let mins = 0;
+        let secs = 0;
+        let milliSecs = 0;
+        let intervalId = 0;
+
+        debugger;
+
+        const pad = (num) => num.toString().padStart(2, '0');
+        const displayClock = () => {
+            document.getElementById("clock").innerHTML
+                = `${pad(mins)} : ${pad(secs)} : ${pad(milliSecs)}`;
+        };
+
+        displayClock();
+        document.getElementById("start").addEventListener("click", onStart);
+        document.getElementById("stop").addEventListener("click", onStop);
+
+        function updateTime() {
+            if (++milliSecs === 100) {
+                milliSecs = 0;
+                if (++secs === 60) {
+                    secs = 0;
+                    if (++mins === 60) { //the end of the stop watch
+                        // mins = 0;
+                        onStop();
+                    }
+                }
+            }
+            displayClock();
+        }
+
+        function onStart() {
+            intervalId = setInterval(updateTime, 10);
+        }
+
+        function onStop() {
+            clearInterval(intervalId);
+        }
+    </script>
+</body>
+
+</html>
