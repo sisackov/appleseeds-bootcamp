@@ -1,0 +1,27 @@
+#box-1 {
+  font-size: 20px;
+}
+
+#box-1 p {
+  font-size: 1.5em; /* makes the font 1.5*20px=30px*/
+  padding: 1em; /* this is stil 30px because the font was already changed the calculation is 1*30px=30px */
+}
+
+#box-1 ul {
+  /* This will get messy since every nested adds additional multiplier */
+  font-size: 1.2em;
+}
+
+html {
+  /* root font-size is always 16px */
+  font-size: 62.5%;
+}
+
+#box-2 h3 {
+  font-size: 2rem;
+}
+
+#box-2 p {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}

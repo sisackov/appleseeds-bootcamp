@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="css/9_1_positioning.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- The reason that the initial code didn't do what was expected is 
+            that absolute positions itself relatively to its nearest ancestor that
+            has positon value "relative". If no such ancestor is found, it is 
+            placed relative to the initial containing block  -->
+        <div id="outer">
+            <div id="inner"></div>
+        </div>
+    </body>
+</html>

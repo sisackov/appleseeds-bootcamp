@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-background-color: rgba(32, 221, 190, 0.664);
+  --header-color: royalblue;
+  --nav-background-color: lightsalmon;
+  --link-color: #f2f2f2;
+  --link-active-color: #04aa6d;
+  --link-hover-color: #ddd;
+  --button-background-color: #098ed7;
+  --button-hover-background-color: #0073be;
+}
+
+body {
+  font-family: "Zen Antique Soft", serif;
+}
+
+header {
+  background-color: var(--header-background-color);
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: var(--header-color);
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: var(--nav-background-color);
+  position: sticky;
+  top: 0;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: var(--link-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: var(--link-hover-color);
+  color: black;
+}
+
+#navbar a.active {
+  background-color: var(--link-active-color);
+  color: white;
+}
+
+aside {
+  float: left;
+  width: 30%;
+  height: 80%;
+  background: rgb(194, 160, 194, 0.655);
+  padding: 20px 10px;
+  margin-bottom: 1px;
+}
+
+aside ul {
+  padding: 10px;
+}
+aside ul li {
+  padding: 25px 5px;
+  margin: 20px 0px;
+  height: 50px;
+  list-style: none;
+}
+
+main {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background: url("https://www.grandviewoutdoors.com/uploads/images/_facebook/red-morning-sky.jpg")
+    no-repeat center center/cover;
+  background-blend-mode: overlay;
+  height: 80%;
+}
+
+h1 {
+  font-family: "Zen Antique", serif;
+}
+p {
+  font-family: "Merriweather", serif;
+}
+
+aside ul li > * {
+  width: 120px;
+  height: 40px;
+  border-radius: 22px;
+  border-style: none;
+  background-color: var(--button-background-color);
+}
+
+.call-to-action-container {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.call-to-action-container > * {
+  height: 35px;
+}
+
+.contact-btn {
+  display: inline;
+  border-radius: 22px;
+  border-style: none;
+  font-size: 20px;
+  background-color: var(--button-background-color);
+  width: 140px;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.email-input {
+  text-align: center;
+  border: var(--button-background-color) 2px solid;
+  width: 170px;
+}
+
+.content {
+  height: 100vh;
+}
+
+@media (max-width: 520px) {
+  header {
+    height: 10vh;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .content {
+    height: 70vh;
+  }
+
+  main {
+    height: 20vhpx;
+    width: 100vw;
+  }
+
+  aside {
+    width: 100vw;
+  }
+}

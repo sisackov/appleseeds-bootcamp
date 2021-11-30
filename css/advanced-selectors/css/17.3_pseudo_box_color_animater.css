@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 30vw;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  background: purple;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container::after {
+  content: "";
+  background: orangered;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.container:hover::before {
+  background-color: blue;
+}

@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.container {
+  border: 5px solid black;
+  margin: 50px;
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rotate-container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  transition: all 1s ease-in-out;
+}
+
+.rotate-container:hover:before {
+  background-color: yellow;
+  transform: rotate(0);
+  z-index: -1;
+}
+
+.translate-container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease-in-out;
+}
+
+.translate-container:hover:before {
+  transform: translateX(0);
+  background-color: black;
+  z-index: -1;
+}
+
+.translate-container:hover {
+  transition: all 1s ease-in-out;
+  color: white;
+}
+
+.translate-y-container::before {
+  content: "YEAH!";
+  position: absolute;
+  height: calc(100% - 20px);
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: all 1s ease-in-out;
+  color: white;
+  padding-top: 20px;
+}
+
+.translate-y-container:hover:before {
+  transform: translateY(0);
+  background-color: red;
+  color: black;
+}
+
+.scale-container::before {
+  content: "Scale & Opacity";
+  position: absolute;
+  height: calc(100% - 20px);
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(2);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  padding-top: 20px;
+}
+
+.scale-container:hover:before {
+  transform: scale(1);
+  background-color: black;
+  color: white;
+  opacity: 1;
+}

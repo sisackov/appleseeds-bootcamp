@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.container {
+  height: 150px;
+  width: 150px;
+  margin: 50px;
+}
+
+.spin-1 {
+  border-radius: 50%;
+  border: gray 10px solid;
+  border-top: green 10px solid;
+  /* timing-function linear so that the speed will remain the same troughout the cycle */
+  animation: spin 2s linear infinite;
+}
+
+.spin-2 {
+  border-radius: 50%;
+  border-top: green 10px solid;
+  animation: spin 2s linear infinite;
+}
+
+.spin-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.ball {
+  background-color: gray;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.ball-1 {
+  animation: change-color 1s linear infinite;
+  animation-duration: 4s;
+}
+
+.ball-2 {
+  animation: change-color 1s linear infinite;
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
+
+.ball-3 {
+  animation: change-color 1s linear infinite;
+  animation-delay: 2s;
+  animation-duration: 4s;
+}
+
+.ball-y {
+  background-color: green;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.ball-4 {
+  animation: jump 1s linear infinite;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+.ball-5 {
+  animation: jump 1s linear infinite;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+}
+
+.ball-6 {
+  animation: jump 1s linear infinite;
+  animation-delay: 2s;
+  animation-duration: 2s;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes change-color {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

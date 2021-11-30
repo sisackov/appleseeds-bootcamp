@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  margin: 20px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+a::after {
+  text-decoration: none;
+  content: "(https://www.appleseeds.org.il/)";
+}

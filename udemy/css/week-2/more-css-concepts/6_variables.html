@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        /* defining variable in the root scope so we can use them anywhere in the stylesheet*/
+        :root {
+            --max-width: 1020px;
+            --primary-color: steelblue;
+            --secondary-color: skyblue;
+            --light-color: #f4f4f4;
+        }
+
+        .box {
+            --box-1-width: 1;
+            --box-2-width: 3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            background: var(--light-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            /*
+             When you have specified a width on the object that you have applied margin: 0 auto to, 
+             the object will sit centrally within it's parent container.
+             
+             Specifying auto as the second parameter basically tells the browser to automatically determine 
+             the left and right margins itself, which it does by setting them equally. It guarantees that the 
+             left and right margins will be set to the same size. The first parameter 0 indicates that 
+             the top and bottom margins will both be set to 0.
+            */
+            margin: 0 auto;
+            max-width: var(--max-width);
+        }
+
+        .box {
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: white;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .box-1 {
+            flex: var(--box-1-width);
+        }
+
+        .box-2 {
+            flex: var(--box-2-width);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Variables</h1>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo porro facilis error at incidunt
+                corporis deserunt qui reiciendis dolorum. Eveniet iste dolores tempora? Reiciendis beatae voluptatum
+                exercitationem ipsa iure?
+            </p>
+        </div>
+        <div class="box box-2">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo porro facilis error at incidunt
+                corporis deserunt qui reiciendis dolorum. Eveniet iste dolores tempora? Reiciendis beatae voluptatum
+                exercitationem ipsa iure?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

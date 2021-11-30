@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Box Model / Margin & Padding</title>
+        <style>
+            /* CSS Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .box {
+                background: #f4f4c4;
+                border: 2px #777 solid;
+                width: 500px;
+
+                /* Padding on all sides */
+                padding: 20px;
+
+                /* Padding per side */
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+
+                /* Padding shorthand = top, right, bottom, left */
+                padding: 10px 20px 10px 20px;
+
+                /* Padding shorthand = top/bottom left/right */
+                padding: 12px 24px;
+
+                /* Margin on all sides */
+                margin: 20px;
+
+                /* Margin per side */
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                margin-left: 20px;
+
+                /* Margin shorthand = top, right, bottom, left */
+                margin: 10px 20px 10px 20px;
+
+                /* Margin shorthand = top/bottom left/right */
+                margin: 24px 12px;
+            }
+
+            .box h3 {
+                padding-bottom: 10px;
+            }
+
+            /* .box p {
+                margin: 0;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h3>Box One</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                quaerat incidunt impedit atque non. Numquam harum nisi rerum
+                inventore facilis.
+            </p>
+        </div>
+        <div class="box">
+            <h3>Box Two</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                quaerat incidunt impedit atque non. Numquam harum nisi rerum
+                inventore facilis.
+            </p>
+        </div>
+    </body>
+</html>

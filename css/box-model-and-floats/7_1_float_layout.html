@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Float Layout assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                /* line-height: 0.2em; */
+                margin-top: 2px;
+            }
+
+            .container {
+                max-width: 1820px; /* Responsive design - no need to scroll horizontaly*/
+            }
+
+            .box {
+                border: 3px solid #333;
+                padding: 10px;
+                margin-bottom: 5px;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            #box-1 {
+                background-color: orange;
+            }
+            #box-2 {
+                background-color: green;
+                float: left;
+                width: 35%;
+                height: 80%;
+                text-align: left;
+            }
+            #box-3 {
+                background-color: purple;
+                float: right;
+                width: 63%;
+                height: 80%;
+                text-align: right;
+            }
+            #box-4 {
+                background-color: rgb(59, 46, 179);
+            }
+
+            .clr {
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="box-1" class="box">
+                <p>Header</p>
+            </div>
+            <section id="floaters">
+                <div id="box-2" class="box">
+                    <p>Side</p>
+                </div>
+                <div id="box-3" class="box">
+                    <p>Main</p>
+                </div>
+            </section>
+
+            <div class="clr"></div>
+
+            <div id="box-4" class="box">
+                <p>Footer</p>
+            </div>
+        </div>
+    </body>
+</html>

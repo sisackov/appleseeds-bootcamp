@@ -1,0 +1,111 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Font Awesome -->
+        <script
+            src="https://kit.fontawesome.com/1e07b058d1.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Zen+Antique&family=Zen+Antique+Soft&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Stas's Portfolio Refactored</title>
+        <style>
+            /* Universal selector */
+            * {
+                /* Allows the boxes to float next to each other */
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Zen Antique Soft', serif;
+            }
+
+            header {
+                background-color: rgba(32, 221, 190, 0.664);
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: royalblue;
+            }
+
+            /* Creates two columns/boxes that float next to each other */
+            nav {
+                float: left;
+                width: 30%;
+                height: 80%;
+                background: rgb(194, 160, 194, 0.655);
+                padding: 20px;
+                margin-bottom: 1px;
+            }
+
+            /* Style the list inside the menu */
+            nav ul {
+                padding: 20px;
+            }
+            nav ul li {
+                padding: 5px;
+                height: 50px;
+            }
+
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background: url('https://www.grandviewoutdoors.com/uploads/images/_facebook/red-morning-sky.jpg')
+                    no-repeat center center/cover;
+                background-blend-mode: overlay;
+                height: 80%;
+            }
+
+            h1 {
+                font-family: 'Zen Antique', serif;
+            }
+            p {
+                font-family: 'Merriweather', serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>I'm a software developer</h2>
+        </header>
+
+        <section>
+            <nav>
+                <img
+                    src="/images/1564381764506.jfif"
+                    alt="My photo"
+                    width="200"
+                    style="border-radius: 50%"
+                />
+                <ul>
+                    <li><a href="#" class="fab fa-linkedin fa-2x"></a></li>
+                    <li><a href="#" class="fab fa-twitter fa-2x"></a></li>
+                    <li><a href="#" class="fab fa-facebook fa-2x"></a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <h1>Stas Isackov</h1>
+                <p>
+                    Educating, nurturing, feeding, and fiancing a household unit
+                    with my partner.
+                </p>
+                <p>
+                    Check out some of my works
+                    <a href="https://github.com/sisackov">here</a>.
+                </p>
+            </article>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #32465e;
+    line-height: 1.42857143;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    align-content: center;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: snow;
+}
+
+button {
+    margin-left: 15px;
+    color: white;
+    border-style: none;
+}
+
+#rflatbtn,
+#rroundbtn,
+#rflatgbtn,
+#rroundgbtn {
+    font-size: 20px;
+    width: 160px;
+    height: 50px;
+}
+
+#cflatbtn,
+#croundbtn,
+#cflatgbtn,
+#croundgbtn {
+    font-size: 19px;
+    width: 120px;
+    height: 40px;
+}
+
+#sflatbtn,
+#sroundbtn,
+#sflatgbtn,
+#sroundgbtn {
+    font-size: 16px;
+    width: 80px;
+    height: 30px;
+}
+
+#rflatbtn {
+    background-color: #00db77;
+}
+
+#rflatbtn:hover {
+    background-color: #00b061;
+}
+
+#cflatbtn {
+    background-color: #fc2425;
+}
+
+#cflatbtn:hover {
+    background-color: #eb0102;
+}
+
+#sflatbtn {
+    background-color: #098ed7;
+}
+
+#sflatbtn:hover {
+    background-color: #0073be;
+}
+
+.roundbtn {
+    border-radius: 22px;
+    border-style: none;
+}
+
+#rroundbtn {
+    background-color: #f57a07;
+}
+
+#rroundbtn:hover {
+    background-color: #cd6203;
+}
+
+#croundbtn {
+    background-color: #f4ce0c;
+}
+
+#croundbtn:hover {
+    background-color: #d2ae09;
+}
+
+#sroundbtn {
+    background-color: #7c8c8f;
+}
+
+#sroundbtn:hover {
+    background-color: #667777;
+}
+
+.ghost > * {
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+#rflatgbtn {
+    border: #00db77 2px solid;
+}
+
+#rflatgbtn:hover {
+    border: none;
+    background-color: #00d775;
+}
+
+#cflatgbtn {
+    border: #fc2425 2px solid;
+}
+
+#cflatgbtn:hover {
+    border: none;
+    background-color: #eb0102;
+}
+
+#sflatgbtn {
+    border: #098ed7 2px solid;
+}
+
+#sflatgbtn:hover {
+    border: none;
+    background-color: #0073be;
+}
+
+#rroundgbtn {
+    border: #f57a07 2px solid;
+}
+
+#rroundgbtn:hover {
+    border: none;
+    background-color: #cd6203;
+}
+
+#croundgbtn {
+    border: #f4ce0c 2px solid;
+}
+
+#croundgbtn:hover {
+    border: none;
+
+    background-color: #d2ae09;
+}
+
+#sroundgbtn {
+    border: #7c8c8f 2px solid;
+}
+
+#sroundgbtn:hover {
+    border: none;
+    background-color: #667777;
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  background-color: lightyellow;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.item {
+  width: 100px;
+}
+
+.item-1 {
+  background: green;
+}
+
+.item-2 {
+  background: blue;
+}
+
+.item-3 {
+  background: red;
+}

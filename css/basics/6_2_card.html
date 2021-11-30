@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Card</title>
+        <style>
+            body {
+                background-color: khaki;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .image-style {
+                height: 500px;
+                background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Israel-2013-Aerial_00-Negev-Makhtesh_Ramon.jpg/1280px-Israel-2013-Aerial_00-Negev-Makhtesh_Ramon.jpg')
+                    no-repeat center center/cover;
+            }
+            .header-style {
+                padding-left: 16px;
+                font-size: 21px;
+            }
+            .mid-card {
+                padding-left: 16px;
+                font-size: 28px;
+            }
+            .link-style {
+                padding-left: 16px;
+                font-size: 19px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image-style"></div>
+        <div id="card">
+            <div class="header-style">
+                <h1>Makhtesh Ramon</h1>
+            </div>
+
+            <div class="mid-card">
+                <p>Cool places to visit or stay at:</p>
+            </div>
+
+            <div>
+                <a
+                    class="link-style"
+                    href="https://www.parks.org.il/reserve-park/chay-ramon/"
+                    >Bio Ramon - Living Desert Museum</a
+                >
+                <a
+                    class="link-style"
+                    href="https://www.isrotel.co.il/isrotel-hotels/negev-mitzpe-ramon-hotels/%D7%91%D7%A8%D7%90%D7%A9%D7%99%D7%AA/"
+                    >Beresheet Hotel</a
+                >
+            </div>
+        </div>
+    </body>
+</html>

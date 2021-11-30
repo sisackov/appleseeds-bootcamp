@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Float & Align</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                    sans-serif;
+                line-height: 1.2em;
+            }
+
+            .container {
+                max-width: 850px; /* Responsive design - no need to scroll horizontaly*/
+                margin: 30px auto;
+            }
+
+            .box {
+                background-color: #f4f4f4;
+                border: 1px solid #333;
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .box p {
+                /* Text Align - the last option is going tobe displayed */
+                text-align: left; /* by default */
+                text-align: right;
+                text-align: center;
+                text-align: justify; /* aligns evenly on the line */
+            }
+
+            #box-2 {
+                float: left;
+                width: 68%;
+            }
+            #box-3 {
+                float: right;
+                width: 30%;
+            }
+
+            .clr {
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- This div was created with Emmet by typing: #box-1.box -->
+            <div id="box-1" class="box">
+                <h3>Heading</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo voluptatem eligendi maxime, assumenda unde vitae
+                    dolores repellendus ipsum dignissimos ea.
+                </p>
+            </div>
+            <div id="box-2" class="box">
+                <h3>Heading</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo voluptatem eligendi maxime, assumenda unde vitae
+                    dolores repellendus ipsum dignissimos ea.
+                </p>
+            </div>
+            <div id="box-3" class="box">
+                <h3>Heading</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo voluptatem eligendi maxime, assumenda unde vitae
+                    dolores repellendus ipsum dignissimos ea.
+                </p>
+            </div>
+
+            <div class="clr"></div>
+
+            <div id="box-4" class="box">
+                <h3>Heading</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo voluptatem eligendi maxime, assumenda unde vitae
+                    dolores repellendus ipsum dignissimos ea.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
