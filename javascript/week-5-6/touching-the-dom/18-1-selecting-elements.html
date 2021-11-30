@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+</body>
+<script>
+    /**1. Select all elements not using the querySelector method. */
+    let h1Get = document.getElementsByTagName('h1');
+    console.log(h1Get);
+    let pGet = document.getElementsByTagName('p');
+    console.log(pGet);
+    let aGet = document.getElementsByTagName('a');
+    console.log(aGet);
+    let imgGet = document.getElementsByTagName('img');
+    console.log(imgGet);
+    let xClassGet = document.getElementsByClassName('x');
+    console.log(xClassGet);
+    let yIdGet = document.getElementById('y');
+    console.log(yIdGet);
+
+    let inputsHTMLCollection = document.getElementsByTagName('input');
+    let input1Get = inputsHTMLCollection[0];
+    console.log(input1Get);
+    let input2Get = inputsHTMLCollection[1];
+    console.log(input2Get);
+    let input3Get = inputsHTMLCollection[2];
+    console.log(input3Get);
+
+
+    /** 2. Select all elements using querySelector method. */
+    let h1Select = document.querySelector('h1');
+    console.dir(h1Select);
+    let pSelect = document.querySelector('p');
+    console.dir(pSelect);
+    let aSelect = document.querySelector('a');
+    console.dir(aSelect);
+    let imgSelect = document.querySelector('img');
+    console.dir(imgSelect);
+    let xClassSelect = document.querySelector('.x');
+    console.dir(xClassSelect);
+    let yIdSelect = document.querySelector('#y');
+    console.dir(yIdSelect);
+
+    let inputsNodeList = document.querySelectorAll('input');
+    let input1Select = inputsNodeList[0];
+    console.dir(input1Select);
+    let input2Select = inputsNodeList[1];
+    console.dir(input2Select);
+    let input3Select = inputsNodeList[2];
+    console.dir(input3Select);
+
+
+    /** 3. Select all inputs and iterate over them with the forEach
+    method and print each one to the console. Using both
+    querySelectorAll and getElementsByTagName */
+
+    //first we need to spread the items in HTMLCollection into an array and then we can use foreach
+    [...inputsHTMLCollection].forEach((element) => {
+        console.log(element);
+    });
+
+    //NodeList has a prototype foreach so there is no need for spreading into an array
+    inputsNodeList.forEach((element) => {
+        console.log(element);
+    });
+
+</script>
+
+</html>

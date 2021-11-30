@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+
+    margin: 150px 40% 0;
+}
+
+.container * {
+    margin-bottom: 20px;
+}
+
+input {
+    width: fit-content;
+    padding: 3px;
+}
+
+input,
+span {
+    font-size: 1.1rem;
+}
