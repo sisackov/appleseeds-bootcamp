@@ -35,20 +35,24 @@ function handleUserInput(input) {
  * @param {string} playerName
  */
 function moveCar(carActiveElement, playerName) {
-    console.log('moveCar', playerName);
-    console.dir(carActiveElement);
-
     if (carActiveElement.nextElementSibling.classList.contains('finish')) {
         displayWinnerMessage(`${playerName} won!`);
     } else {
-        carActiveElement.classList.remove('active');
-        carActiveElement.nextElementSibling.classList.add('active');
-        if (playerName === 'player1') {
-            player1ActiveElement = carActiveElement.nextElementSibling;
-        } else {
-            player2ActiveElement = carActiveElement.nextElementSibling;
+        switch (playerName) {
+            case 'player1':
+                player1ActiveElement = updateMovingCar(player1ActiveElement);
+                break;
+            case 'player2':
+                player2ActiveElement = updateMovingCar(player2ActiveElement);
+                break;
         }
     }
+}
+
+function updateMovingCar(carActiveElement) {
+    carActiveElement.classList.remove('active');
+    carActiveElement.nextElementSibling.classList.add('active');
+    return carActiveElement.nextElementSibling;
 }
 
 function displayWinnerMessage(message) {
@@ -58,29 +62,17 @@ function displayWinnerMessage(message) {
 
 function resetGame() {
     winnerMessageElement.classList.add('hide');
-
-    player1ActiveElement.classList.remove('active');
-    player1ActiveElement = document.querySelector(
-        '#player1-race td:first-child'
-    );
-    player1ActiveElement.classList.add('active');
-
-    player2ActiveElement.classList.remove('active');
-    player2ActiveElement = document.querySelector(
-        '#player2-race td:first-child'
-    );
-    player2ActiveElement.classList.add('active');
-    // resetPlayer(player1ActiveElement, '1');
-    // resetPlayer(player2ActiveElement, '2');
+    player1ActiveElement = resetPlayer(player1ActiveElement, '1');
+    player2ActiveElement = resetPlayer(player2ActiveElement, '2');
 }
 
-/* TODO WHY this is not working!!!!!!!!!!!!!
- function resetPlayer(activeElement, playerNumber) {
+function resetPlayer(activeElement, playerNumber) {
     activeElement.classList.remove('active');
     let selector = `#player${playerNumber}-race td:first-child`;
     activeElement = document.querySelector(selector);
     activeElement.classList.add('active');
-} */
+    return activeElement;
+}
 
 // **************************************************
 // Define event listeners
