@@ -11,7 +11,6 @@ export function update() {
     /**
      * Loops through the snakeBody array from one before the last to the first.
      * The segments are moved to the position of the segment before them.
-     *
      */
     // if (snakeBody.length > 1) console.log(...snakeBody);
 
