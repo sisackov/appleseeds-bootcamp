@@ -1,24 +1,55 @@
-// const body = document.querySelector('body');
-// const button = document.createElement('button');
-// button.innerText = 'Show me a joke';
-// const h1 = document.createElement('h1');
-// const p = document.createElement('p');
-// body.appendChild(button);
-// body.appendChild(h1);
-// body.appendChild(p);
+/**
+ * @returns {Promise<Number[]>} an array of food recipe Ids
+ */
+const getIDs = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([532, 543, 753, 1, 5]);
+        }, 1500);
+    });
 
-// function fetchJoke() {
-//     fetch('https://api.jokes.one/jod')
-//         .then(response => response.json())
-//         .then(data => {
-//             const joke = data.contents.jokes[0].joke;
-//             console.table(joke);
-//             h1.innerText = joke.title;
-//             p.innerText = joke.text;
-//         }).catch(error => {
-//             console.log(error);
-//         });
-// }
+/**
+ * @param {Number} id
+ * @returns {Promise<Object>} a food recipe object
+ * @throws {Error} if id is not a number
+ * @throws {Error} if id is not found  TODO
+ */
+const getRecipe = (recipeID) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(
+            (ID) => {
+                const recipe = {
+                    title: 'Fresh tomato pasta',
+                    publisher: 'Pinchas Hodadad',
+                };
+                resolve(`${ID}: ${recipe.title}`);
+            },
+            1500,
+            recipeID
+        );
+    });
+};
 
-// button.addEventListener('click', fetchJoke);
+// getIDs()
+//     .then((IDs) => {
+//         console.log(IDs);
+//         return getRecipe(IDs[2]);
+//     })
+//     .then((recipe) => {
+//         console.log(recipe);
+//     })
+//     .catch((error) => {
+//         console.log('It is an error!');
+//     });
 
+async function getRecipeAsync(index) {
+    try {
+        const IDs = await getIDs();
+        const recipe = await getRecipe(IDs[index]);
+        console.log(recipe);
+    } catch (error) {
+        console.log('It is an error!', error);
+    }
+}
+
+getRecipeAsync(1);
