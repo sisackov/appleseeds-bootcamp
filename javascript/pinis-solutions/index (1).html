@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    //your js code here
+    const className = document.getElementsByClassName('x')[0];
+    const id = document.getElementById('y');
+    const link = document.getElementsByTagName('a')[0];
+    const img = document.getElementsByTagName('img')[0];
+    const header = document.getElementsByTagName('h1')[0];
+    const paragraph = document.getElementsByTagName('p')[0];
+    const inputs = document.getElementsByTagName('input');
+    const inputs2 = document.querySelectorAll('input');
+    // console.log(inputs);
+    [...inputs].forEach((input) => console.log(input));
+
+    console.log(className, id, link, img, header, paragraph, inputs);
+  </script>
+</html>

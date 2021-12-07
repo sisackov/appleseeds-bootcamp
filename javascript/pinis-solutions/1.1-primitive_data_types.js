@@ -1,0 +1,14 @@
+const string = "Israel";
+const myNumber = 6;
+const obj = {};
+const bool = true;
+const nullValue = null;
+let notDefined;
+const mySymbol = Symbol("$");
+console.log(typeof string);
+console.log(typeof myNumber);
+console.log(typeof obj);
+console.log(typeof bool);
+console.log(typeof nullValue);
+console.log(typeof notDefined);
+console.log(typeof mySymbol);
