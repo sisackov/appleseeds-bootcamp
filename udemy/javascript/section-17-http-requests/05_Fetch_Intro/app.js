@@ -18,11 +18,11 @@
 // firstReq.addEventListener('error', (e) => {
 // 	console.log('ERROR!!!!!!');
 // });
-// firstReq.open('GET', 'https://swapi.co/api/planets/');
+// firstReq.open('GET', 'https://swapi.dev/api/planets/');
 // firstReq.send();
 // console.log('Request Sent!');
 
-fetch('https://swapi.co/api/planetsuy21/')
+fetch('https://swapi.dev/api/planetsuy21/')
 	.then((response) => {
 		if (!response.ok)
 			throw new Error(`Status Code Error: ${response.status}`);

@@ -1,7 +1,7 @@
 // ********************************
 // CHAINING REQUESTS USING AXIOS
 // ********************************
-const fetchNextPlanets = (url = 'https://swapi.co/api/planets/') => {
+const fetchNextPlanets = (url = 'https://swapi.dev/api/planets/') => {
 	console.log(url);
 	return axios.get(url);
 };
@@ -40,7 +40,7 @@ fetchNextPlanets()
 // 	return Promise.resolve(data.next);
 // };
 
-// const fetchNextPlanets = (url = 'https://swapi.co/api/planets/') => {
+// const fetchNextPlanets = (url = 'https://swapi.dev/api/planets/') => {
 // 	return fetch(url);
 // };
 

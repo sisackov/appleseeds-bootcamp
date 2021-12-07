@@ -12,7 +12,7 @@ const printPlanets = (data) => {
 	return Promise.resolve(data.next);
 };
 
-const fetchNextPlanets = (url = 'https://swapi.co/api/planets/') => {
+const fetchNextPlanets = (url = 'https://swapi.dev/api/planets/') => {
 	return fetch(url);
 };
 

@@ -18,11 +18,11 @@
 // firstReq.addEventListener('error', (e) => {
 // 	console.log('ERROR!!!!!!');
 // });
-// firstReq.open('GET', 'https://swapi.co/api/planets/');
+// firstReq.open('GET', 'https://swapi.dev/api/planets/');
 // firstReq.send();
 // console.log('Request Sent!');
 
-fetch('https://swapi.co/api/planets/')
+fetch('https://swapi.dev/api/planets/'/* , { mode: 'no-cors' } */)
 	.then((response) => {
 		if (!response.ok)
 			throw new Error(`Status Code Error: ${response.status}`);
@@ -30,6 +30,7 @@ fetch('https://swapi.co/api/planets/')
 		return response.json();
 	})
 	.then((data) => {
+		console.log(data);
 		console.log('FETCHED ALL PLANETS (first 10)');
 		const filmURL = data.results[0].films[0];
 		return fetch(filmURL);
