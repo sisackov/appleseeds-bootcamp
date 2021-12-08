@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Fetch</title>
+  </head>
+  <body>
+    <h1>My Pokemon</h1>
+    <button>Get all pokemons</button>
+
+    <div id="container">
+      <h2 class="title"></h2>
+      <div class="pokemons"></div>
+    </div>
+    <script>
+      const btn = document.querySelector('button');
+      const titleEl = document.querySelector('.title');
+      const pokemons = document.querySelector('.pokemons');
+      const catchThemAll = () => {
+        fetch('https://pokeapi.co/api/v2/pokemon')
+          .then((res) => res.json())
+          .then(({ results }) => {
+            results.forEach(({ name }) => {
+              const pokemonBtn = document.createElement('button');
+
+              pokemonBtn.addEventListener('click', () => {
+                showPokemon(name);
+              });
+              pokemonBtn.innerText = name;
+              pokemons.appendChild(pokemonBtn);
+            });
+          });
+      };
+      btn.addEventListener('click', catchThemAll);
+      const showPokemon = (pokemon) => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+          .then((res) => res.json())
+          .then((res) => console.log(res));
+      };
+    </script>
+  </body>
+</html>

@@ -7,7 +7,15 @@ body.appendChild(button);
 body.appendChild(h1);
 body.appendChild(p);
 
-const showJoke = async (data) => {
+const fetchUrl = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response;
+};
+
+const showJoke = (data) => {
     const joke = data.contents.jokes[0].joke;
     h1.innerText = joke.title;
     p.innerText = joke.text;
@@ -15,22 +23,12 @@ const showJoke = async (data) => {
 
 async function fetchJoke() {
     try {
-        const response = await fetch('https://api.jokes.one/jod');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        const response = await fetchUrl('https://api.jokes.one/jod');
         const json = await response.json();
-        await showJoke(json);
+        showJoke(json);
     } catch (error) {
         console.log(error);
     }
 }
-
-/* async function showJoke(data) {
-    const joke = data.contents.jokes[0].joke;
-    console.table(joke);
-    h1.innerText = joke.title;
-    p.innerText = joke.text;
-} */
 
 button.addEventListener('click', fetchJoke);
