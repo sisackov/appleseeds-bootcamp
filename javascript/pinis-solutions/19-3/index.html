@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    form {
+      border: 1px solid black;
+      padding: 1rem;
+      margin: 2rem;
+    }
+
+    input[type='text'] {
+      width: 1rem;
+    }
+    .button-container {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    input[type='submit'] {
+      background: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <h3>Text to copy:</h3>
+    <h5>123456</h5>
+    <div class="container">
+      <form name="verify">
+        <div class="inputs">
+          <input type="text" name="n1" maxlength="1" />
+          <input type="text" name="n2" maxlength="1" />
+          <input type="text" name="n3" maxlength="1" />
+          <input type="text" name="n4" maxlength="1" />
+          <input type="text" name="n5" maxlength="1" />
+          <input type="text" name="n4" maxlength="1" />
+        </div>
+        <div class="button-container">
+          <input type="submit" value="Verify" />
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

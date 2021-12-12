@@ -17,24 +17,16 @@ const keys = ['Name', 'Height', 'Hair', 'Planet Name', 'Planet Population'];
 const swCharacters = [];
 
 function fillSwCaracters(data) {
-    console.log(data);
     for (const swc of data) {
         let person = new swCharacter(
             swc.name,
-            swc.height,
+            swc.height + ' cm',
             swc.hair_color,
             swc.planetName,
             swc.planetPopulation
         );
         swCharacters.push(person);
     }
-}
-
-function createTitleRow() {
-    const row = document.createElement('div');
-    row.classList.add('title-row');
-    row.innerText = 'Star Wars Characters';
-    document.querySelector('body').prepend(row);
 }
 
 function createTableCell(value, rowNum) {
@@ -50,35 +42,28 @@ function createTableCell(value, rowNum) {
     return cell;
 }
 
-function createTable() {
-    createTitleRow();
+function createTableHeader() {
+    const row = document.createElement('div');
+    row.classList.add('title-row');
+    row.innerText = 'Star Wars Characters';
+    document.querySelector('body').prepend(row);
     keys.forEach((key) => {
-        const row = document.createElement('div');
-        for (let i = -1; i < swCharacters.length; i++) {
-            if (i < 0) {
-                row.appendChild(createTableCell(key, i));
-            } else if (key === 'Planet Name') {
-                const planetCell = createTableCell(
-                    swCharacters[i].planet.name,
-                    i
-                );
-                planetCell.dataset.planetOf = swCharacters[i].name;
-                row.appendChild(planetCell);
-            } else if (key === 'Planet Population') {
-                const popCell = createTableCell(
-                    swCharacters[i].planet.population,
-                    i
-                );
-                popCell.dataset.populationOf = swCharacters[i].name;
-                row.appendChild(popCell);
-            } else {
-                row.appendChild(
-                    createTableCell(swCharacters[i][key.toLowerCase()], i)
-                );
-            }
-        }
-        tableContainer.appendChild(row);
+        tableContainer.appendChild(createTableCell(key, -1));
     });
+}
+
+function populateTable(rowNum = 0) {
+    // for (const swc of swCharacters) {
+    for (; rowNum < swCharacters.length; rowNum++) {
+        const swc = swCharacters[rowNum];
+        tableContainer.appendChild(createTableCell(swc.name, rowNum));
+        tableContainer.appendChild(createTableCell(swc.height, rowNum));
+        tableContainer.appendChild(createTableCell(swc.hair, rowNum));
+        tableContainer.appendChild(createTableCell(swc.planet.name, rowNum));
+        tableContainer.appendChild(
+            createTableCell(swc.planet.population, rowNum)
+        );
+    }
 }
 
 const fetchUrl = async (url) => {
@@ -97,75 +82,37 @@ const extractJson = async (response) => {
     return json;
 };
 
-function createCardBody(data) {
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-
-    const cardTitle = document.createElement('h3');
-    cardTitle.classList.add('card-title');
-    cardTitle.innerText = data.login;
-    cardBody.appendChild(cardTitle);
-
-    const cardText = document.createElement('p');
-    cardText.classList.add('card-text');
-    cardText.innerText = `Public Repos: ${data.repos_data.length}`;
-    cardBody.appendChild(cardText);
-
-    const cardLink = document.createElement('a');
-    cardLink.classList.add('btn', 'btn-primary');
-    cardLink.href = data.html_url;
-    cardLink.innerText = 'Github Profile';
-    cardBody.appendChild(cardLink);
-
-    return cardBody;
-}
-
-function createUserCard(data) {
-    const card = document.createElement('div');
-    card.classList.add('card', 'm-3', 'w-25');
-
-    const img = document.createElement('img');
-    img.classList.add('card-img-top');
-    img.src = data.avatar_url;
-    img.alt = data.login + ' avatar';
-    card.appendChild(img);
-
-    const cardBody = createCardBody(data);
-
-    card.appendChild(cardBody);
-    return card;
-}
-
 const fetchPlanet = async (swc) => {
     const response = await fetch(swc.homeworld);
     const data = await extractJson(response);
-    swc.planetName = data.name;
-    swc.planetPopulation = data.population;
-    document.querySelector('div[data-planet-of="' + swc.name + '"]').innerText =
-        data.name;
-    document.querySelector(
-        'div[data-population-of="' + swc.name + '"]'
-    ).innerText = data.population;
-
-    console.log(swc);
+    return data;
 };
 
-const fetchData = async (searchName) => {
+const fetchData = async (page = 1) => {
     try {
-        const url = `https://swapi.dev/api/people`;
+        const url = `https://swapi.dev/api/people/`;
         const response = await fetchUrl(url);
         const data = await extractJson(response);
-        // console.log(data);
 
+        let planetsFetch = [];
         data.results.forEach((swc) => {
-            fetchPlanet(swc);
+            planetsFetch.push(fetchPlanet(swc));
         });
 
+        const planets = await Promise.all(planetsFetch);
+        for (let i = 0; i < planets.length; i++) {
+            //TODO move to function
+            data.results[i].planetName = planets[i].name;
+            data.results[i].planetPopulation = planets[i].population;
+        }
+        // console.log(planets);
+
         fillSwCaracters(data.results);
-        createTable();
+        populateTable(10 * (page - 1));
     } catch (error) {
         console.log(error);
     }
 };
 
-fetchData('jedi');
+createTableHeader();
+fetchData(1);
