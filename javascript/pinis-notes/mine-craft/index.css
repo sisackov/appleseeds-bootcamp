@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  display: flex;
+  height: 100vh;
+}
+
+#matrix {
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#right-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  width: 30vw;
+}
+#tool-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50%;
+}
+
+.tool {
+  height: 22%;
+  width: 34%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#storage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 0.5rem;
+}
+@media only screen and (max-width: 450px) {
+  #storage {
+    justify-content: center;
+  }
+}
+
+.material-type {
+  margin: 2rem;
+}
+
+.tile {
+  width: 8.3%;
+  height: 6.25%;
+  /* border: 1px solid black; */
+}
+
+.sky {
+  background: skyblue;
+}
+
+.leaf {
+  background-image: url("./img/leaf.png");
+  background-size: cover;
+}
+
+.trunk {
+  background-image: url("./img/trunk.jpg");
+  background-size: cover;
+}
+
+.rock {
+  background-image: url("./img/rock.png");
+  background-size: cover;
+}
+
+.grass {
+  background-image: url("./img/grass.png");
+  background-size: cover;
+}
+
+.dirt {
+  background-image: url("./img/dirt.jpg");
+  background-size: cover;
+}
+.tool-item {
+  text-align: center;
+}
+
+.selected {
+  border: 2px solid red;
+}
+
+.inventory {
+  height: 6rem;
+  width: 6rem;
+  background: lightgray;
+}
+
+.storage-item {
+  width: 2rem;
+  height: 2rem;
+}
