@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApprovalCard from './ApprovalCard';
 import CommentDetail from './CommentDetail';
 
 if (module.hot) {
@@ -9,24 +10,32 @@ if (module.hot) {
 const App = () => {
     return (
         <div className='ui container comments'>
-            <CommentDetail
-                author='Sam'
-                timeAgo='Today at 4:45PM'
-                content='Nice blog post!'
-                avatarUrl='https://semantic-ui.com/images/avatar/small/elliot.jpg'
-            />
-            <CommentDetail
-                author='Jim'
-                timeAgo='Today at 2:00AM'
-                content='Nice blog post!'
-                avatarUrl='https://semantic-ui.com/images/avatar/small/jenny.jpg'
-            />
-            <CommentDetail
-                author='Tim'
-                timeAgo='Yesterday at 5:00PM'
-                content="I don't like this blog post!"
-                avatarUrl='https://semantic-ui.com/images/avatar/small/joe.jpg'
-            />
+            <ApprovalCard>
+                <CommentDetail
+                    author='Sam'
+                    timeAgo='Today at 4:45PM'
+                    content='Nice blog post!'
+                    avatarUrl='https://semantic-ui.com/images/avatar/small/elliot.jpg'
+                />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <CommentDetail
+                    author='Jim'
+                    timeAgo='Today at 2:00AM'
+                    content='I like the subject'
+                    avatarUrl='https://semantic-ui.com/images/avatar/small/jenny.jpg'
+                />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <CommentDetail
+                    author='Tim'
+                    timeAgo='Yesterday at 5:00PM'
+                    content="I don't like this blog post!"
+                    avatarUrl='https://semantic-ui.com/images/avatar/small/joe.jpg'
+                />
+            </ApprovalCard>
         </div>
     );
 };
