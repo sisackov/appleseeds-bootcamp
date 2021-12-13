@@ -5,7 +5,7 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: violet;
+    background-color: honeydew;
 }
 
 code {
@@ -45,6 +45,20 @@ img {
 }
 
 .counter {
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 1.6em;
+    font-weight: 900;
+
+    margin: auto 2rem;
+}
+
+.zero {
+    color: black;
+}
+
+.negative {
+    color: red;
+}
+
+.positive {
+    color: green;
 }

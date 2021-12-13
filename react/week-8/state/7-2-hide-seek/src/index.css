@@ -37,14 +37,22 @@ img {
 }
 
 .btn {
-    width: 8rem;
+    width: 10rem;
     height: 2rem;
     margin: 10px;
     font-size: 1.3em;
     border-radius: 5px;
+    margin-bottom: 2rem;
+    cursor: pointer;
 }
 
-.counter {
-    font-size: 1.3em;
-    font-weight: 600;
+.box-show {
+    display: block;
+    width: 70vmin;
+    height: 70vmin;
+    background-color: yellowgreen;
+}
+
+.box-hide {
+    display: none;
 }

@@ -10,13 +10,13 @@ if (module.hot) {
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { counter: 0 };
+        this.state = { showBox: true };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
         this.setState((prevState) => ({
-            counter: prevState.counter + 1,
+            showBox: !prevState.showBox,
         }));
     }
 
@@ -24,13 +24,13 @@ class App extends React.Component {
     render() {
         return (
             <div className='container'>
-                <h1>Click Counter</h1>
-                <div>
-                    <button className='btn' onClick={this.handleClick}>
-                        Increment
-                    </button>
-                    <span className='counter'>{this.state.counter}</span>
-                </div>
+                <h1>Hide & Seek</h1>
+                <button className='btn' onClick={this.handleClick}>
+                    Show / Hide
+                </button>
+                <div
+                    className={this.state.showBox ? 'box-show' : 'box hide'}
+                ></div>
             </div>
         );
     }
