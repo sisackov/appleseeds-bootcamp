@@ -12,11 +12,9 @@ class App extends React.Component {
     render() {
         return (
             <div className='container'>
-                <h1>Boxes</h1>
+                <h1>Changing Box</h1>
                 <div>
-                    <Box width='400px' height='200px' color='green'></Box>
-                    <Box width='200px' height='300px' color='red'></Box>
-                    <Box width='500px' height='150px' color='yellow'></Box>
+                    <Box width='400px' height='400px' color='white'></Box>
                 </div>
             </div>
         );

@@ -22,20 +22,9 @@ code {
 }
 
 .box {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* position: relative; */
-    left: 0;
-    animation: box-animation 1s ease-in-out 1s 1;
+    margin: 20px;
 }
 
-@keyframes box-animation {
-    from {
-        transform: translateX(-150%);
-    }
-    to {
-        transform: translateX(0);
-    }
+.circle {
+    border-radius: 50%;
 }

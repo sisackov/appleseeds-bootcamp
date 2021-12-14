@@ -3,42 +3,42 @@ import React from 'react';
 class Box extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { showBoxPhase: 0 };
+        this.colors = ['red', 'green', 'yellow', 'blue', 'orange'];
+        this.intervalId = 0;
+        this.state = { colorIndex: 0, isBox: true };
     }
 
     componentDidMount() {
         console.log('componentDidMount');
-        setTimeout(() => {
-            this.setState({ showBoxPhase: 1 });
-        }, 1000);
+        this.intervalId = setInterval(this.incrementColorIndex, 1000);
     }
 
-    componentDidUpdate() {
-        console.log('componentDidUpdate');
-        setTimeout(() => {
-            this.setState({ showBoxPhase: 2 });
-        }, 4000);
-    }
-
-    getBoxClassName = () => {
-        switch (this.state.showBoxPhase) {
-            case 0:
-                return 'box';
-            case 1:
-                return 'box-animation';
-            default:
-                return 'hidden';
+    incrementColorIndex = () => {
+        console.log('incrementColorIndex');
+        if (this.state.colorIndex < this.colors.length) {
+            this.setState({ colorIndex: this.state.colorIndex + 1 });
+        } else {
+            clearInterval(this.intervalId);
+            this.setState({ isBox: false });
         }
+    };
+
+    updateBox = () => {
+        console.log('updateBox', this.state.colorIndex);
+        if (this.state.isBox) {
+            return this.colors[this.state.colorIndex];
+        }
+        return 'blue';
     };
 
     render() {
         return (
             <div
-                className={this.getBoxClassName()}
+                className={this.state.isBox ? 'box' : 'box circle'}
                 style={{
                     width: this.props.width,
                     height: this.props.height,
-                    backgroundColor: this.props.color,
+                    backgroundColor: this.updateBox(),
                 }}
             >
                 {this.props.children}
