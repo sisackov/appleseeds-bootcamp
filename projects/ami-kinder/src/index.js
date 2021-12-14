@@ -4,8 +4,6 @@ import './index.css';
 import kinder1 from './images/kinder1.png';
 import kinder2 from './images/kinder2.jpg';
 import kinder3 from './images/kinder3.png';
-// import faker from 'faker';
-// import Kinder from './Kinder';
 
 //hot replacement
 if (module.hot) {
