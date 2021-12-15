@@ -1,29 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Box from './Box';
+import Spinner from './Spinner';
 
-//hot replacement
 if (module.hot) {
     module.hot.accept();
 }
 
 class App extends React.Component {
+    state = { isTimerOn: true };
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ isTimerOn: false });
+        }, 3000);
+    }
+
+    renderContent() {
+        if (this.state.isTimerOn) {
+            return <Spinner />;
+        }
+        return <div>Hello World</div>;
+    }
+
     render() {
-        return (
-            <div className='container'>
-                <h1>Changing Box</h1>
-                <div>
-                    <Box width='400px' height='400px' color='white'></Box>
-                </div>
-            </div>
-        );
+        return <div className='border red'>{this.renderContent()}</div>;
     }
 }
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+ReactDOM.render(<App />, document.querySelector('#root'));
