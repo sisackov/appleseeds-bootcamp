@@ -1,6 +1,6 @@
 import React from 'react';
 
-class InputText extends React.Component {
+class InputTextArea extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,21 +15,19 @@ class InputText extends React.Component {
 
     onFocusOut = (e) => {
         e.preventDefault();
-        if (this.validator && this.validator(this.state.term)) {
-            this.props.inputFocusOut(this.stateKey, this.state.term);
-        } else {
+        if (this.validator && !this.validator(this.state.term)) {
             this.inputRef.current.style.borderColor = 'red';
         }
+        this.props.inputFocusOut(this.stateKey, this.state.term);
     };
 
     render() {
         return (
             <div className='field'>
                 <label className='field-label'>{this.props.label}</label>
-                <input
+                <textarea
                     className='field-input'
                     ref={this.inputRef}
-                    type='text'
                     value={this.state.term}
                     disabled={!this.props.isEnabled}
                     onChange={(e) => this.setState({ term: e.target.value })}
@@ -40,4 +38,4 @@ class InputText extends React.Component {
     }
 }
 
-export default InputText;
+export default InputTextArea;
