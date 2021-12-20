@@ -1,80 +1,39 @@
 import React from 'react';
 import './App.css';
-import randomuser from './randomuser';
-import AvatarList from './AvatarList';
-import SearchBar from './SearchBar';
-
-function Avatar(id, name, picture) {
-    this.id = id;
-    this.name = `${name.title} ${name.first} ${name.last}`;
-    this.picture = picture.large;
-}
+import { data as dataArray, getBornBefore, getValues } from './data';
+import DataList from './DataList';
+import NameComponent from './NameComponent';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            avatars: [],
+            data: [],
             isLoading: true,
-            errorMsg: '',
-            filter: '',
+            filter: 1990,
         };
     }
 
     componentDidMount() {
         this.setState(() => {
-            return { isLoading: true };
+            return { isLoading: false, data: dataArray };
         });
-        this.initData();
     }
 
-    initData = async () => {
-        const promises = [];
-        for (let i = 0; i < 20; i++) {
-            promises.push(await randomuser.get('/api'));
-        }
-        Promise.all(promises);
-        const avatars = promises.map(
-            (res) =>
-                new Avatar(
-                    res.data.results[0].login.uuid,
-                    res.data.results[0].name,
-                    res.data.results[0].picture
-                )
-        );
-        this.setState({
-            avatars: avatars,
-            isLoading: false,
-        });
-    };
-
-    getInRange = (min, max) => {
-        return Math.ceil(Math.random() * (max - min) + min);
-    };
-
-    searchHandler = (text) => {
-        this.setState({ filter: text });
-    };
-
     render() {
-        if (this.state.isLoading) {
+        const { data, isLoading, filter } = this.state; //!destructuring TODO:understand this:)
+        if (isLoading) {
             return <p>Loading...</p>;
         } else {
-            const { avatars, isLoading, errorMsg, filter } = this.state; //!destructuring TODO:understand this:)
             return (
                 <div className='container'>
-                    <h1>Avatars</h1>
-                    {!isLoading && (
-                        <SearchBar
-                            label='Search avatars'
-                            onSearchSubmit={this.searchHandler}
-                        />
-                    )}
-                    {<p>{errorMsg || ' '}</p>}
-                    {!isLoading && avatars && (
-                        <AvatarList avatars={avatars} filter={filter} />
-                    )}
+                    <h1>Data Massaging</h1>
+                    <NameComponent data={getValues(data, 'name')} />
+                    <DataList
+                        data={getBornBefore(data, filter)}
+                        label={`Born before ${filter}`}
+                    />
                 </div>
             );
         }
