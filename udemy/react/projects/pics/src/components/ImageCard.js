@@ -9,10 +9,12 @@ class ImageCard extends React.Component {
 
     componentDidMount() {
         //setSpans needs to run only after the image has been loaded
-        this.imageRef.current.addEventListener('load', this.setSpans);
+        // this.imageRef.current.addEventListener('load', this.setSpans);
+        // console.log('componentDidMount');
     }
 
     setSpans = () => {
+        // console.log('setSpans');
         const height = this.imageRef.current.clientHeight;
         const spans = Math.ceil(height / 10);
         this.setState({ spans });
@@ -23,7 +25,12 @@ class ImageCard extends React.Component {
 
         return (
             <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-                <img ref={this.imageRef} alt={description} src={urls.regular} />
+                <img
+                    ref={this.imageRef}
+                    alt={description}
+                    src={urls.regular}
+                    onLoad={this.setSpans}
+                />
             </div>
         );
     }
