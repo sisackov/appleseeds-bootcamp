@@ -1,13 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route /* Link */ } from 'react-router-dom';
+import StreamCreate from './streams/StreamCreate';
+import StreamEdit from './streams/StreamEdit';
+import StreamDelete from './streams/StreamDelete';
+import StreamList from './streams/StreamList';
+import StreamShow from './streams/StreamShow';
+import Header from './Header';
 
-const PageOne = () => {
+/* const PageOne = () => {
     return <Link to='/pagetwo'>Navigate to PageTwo</Link>;
 };
 
 const PageTwo = () => {
     return <Link to='/'>Navigate to PageOne</Link>;
-};
+}; */
 
 /**
  ** 'history'     -> keeps track of the address bar in the browser. See: https://developer.mozilla.org/en-US/docs/Web/API/History
@@ -31,10 +37,16 @@ const PageTwo = () => {
  */
 const App = () => {
     return (
-        <div>
+        <div className='ui container'>
             <BrowserRouter>
-                <Route path='/' exact component={PageOne} />
-                <Route path='/pagetwo' component={PageTwo} />
+                <Header />
+                <Route path='/' exact component={StreamList} />
+                <Route path='streams/new' component={StreamCreate} />
+                <Route path='streams/edit' component={StreamEdit} />
+                <Route path='streams/delete' component={StreamDelete} />
+                <Route path='streams/show' component={StreamShow} />
+                {/* <Route path='/' exact component={PageOne} />
+                <Route path='/pagetwo' component={PageTwo} /> */}
             </BrowserRouter>
         </div>
     );
