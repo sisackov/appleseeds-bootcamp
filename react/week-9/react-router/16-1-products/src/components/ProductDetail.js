@@ -1,12 +1,9 @@
 import React from 'react';
 import store from '../store';
 
-const ProductDetails = ({
-    match: {
-        params: { id },
-    },
-}) => {
-    const productId = parseInt(id);
+const ProductDetails = ({ match }) => {
+    const productId = +match.params.id; //unary plus to convert to number
+    console.log(productId);
     const product = store.find((obj) => obj.id === productId);
     return (
         <div className='details'>

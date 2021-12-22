@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import store from '../store';
-import ProductDetails from './ProductDetail';
 
 class Products extends React.Component {
     state = { data: [] };
@@ -15,30 +14,19 @@ class Products extends React.Component {
     render() {
         const { data } = this.state;
         return (
-            <BrowserRouter>
-                <div className='link-container'>
-                    {data.map((product) => {
-                        return (
-                            <Link
-                                key={`Link-to-/products/${product.id}`}
-                                to={`/products/${product.id}/${product.id}`}
-                                className='link-item'
-                            >
-                                {product.title}
-                            </Link>
-                        );
-                    })}
-                </div>
+            <div className='link-container'>
                 {data.map((product) => {
                     return (
-                        <Route
-                            key={`Route-to-/products/${product.id}`}
-                            path={`/products/${product.id}/:id`}
-                            component={ProductDetails}
-                        />
+                        <Link
+                            key={`Link-to-${product.id}`}
+                            to={`${this.props.location.pathname}/${product.id}`}
+                            className='link-item'
+                        >
+                            {product.title}
+                        </Link>
                     );
                 })}
-            </BrowserRouter>
+            </div>
         );
     }
 }

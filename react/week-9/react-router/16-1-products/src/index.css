@@ -16,3 +16,10 @@
 .link-item {
     margin: 0.8rem;
 }
+
+.link-container {
+    margin: 0.3rem 0;
+    padding: 0.3rem 0;
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+}
