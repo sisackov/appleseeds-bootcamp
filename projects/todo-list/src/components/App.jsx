@@ -13,13 +13,14 @@ class App extends React.Component {
             selectedItem: { title: '' },
             showModal: false,
             isLoading: false,
+            errorMsg: '',
         };
     }
 
     async componentDidMount() {
         this.setState({ isLoading: true });
         try {
-            const { data } = await API.get('avatars');
+            const { data } = await API.get('todoItems');
             this.setState({ data, isLoading: false });
         } catch (e) {
             this.setState({ errorMsg: e.message });
@@ -49,37 +50,63 @@ class App extends React.Component {
         });
     };
 
-    handleCreate = (item) => {
-        console.log('Item new: ', item);
-        item.id = uuidV4();
-        this.setState({
-            data: [...this.state.data, item], //TODO: spread operator
-            showModal: false,
-        });
+    handleCreate = async (newItem) => {
+        try {
+            const { data } = await API.post('/todoItems/', newItem);
+            this.setState((state) => {
+                return { data: [...state.data, data], showModal: false };
+            });
+        } catch (e) {
+            this.setState({ errorMsg: e.message, showModal: false });
+        }
     };
 
-    handleUpdate = (item) => {
-        console.log('Item updated: ', item);
-        this.setState({
-            data: this.state.data.map((i) => (i.id === item.id ? item : i)), //TODO: update item
-            showModal: false,
-        });
+    handleUpdate = async (updatedItem) => {
+        try {
+            const { data } = await API.put(
+                `/todoItems/${updatedItem.id}`,
+                updatedItem
+            );
+            const newItems = this.state.data.map((item) =>
+                item.id === updatedItem.id ? updatedItem : item
+            );
+            this.setState({ data: newItems, showModal: false });
+        } catch (e) {
+            this.setState({ errorMsg: e.message, showModal: false });
+        }
+        // console.log('Item updated: ', updatedItem);
+        // this.setState({
+        //     data: this.state.data.map((i) => (i.id === updatedItem.id ? updatedItem : i)), //TODO: update item
+        //     showModal: false,
+        // });
     };
 
-    handleDelete = (item) => {
-        console.log('Item deleted: ', item);
-        this.setState({
-            data: this.state.data.filter((i) => i.id !== item.id), //TODO: remove item
-        });
+    handleDelete = async (item) => {
+        try {
+            await API.delete(`/todoItems/${item.id}`);
+            this.setState({
+                data: this.state.data.filter((i) => i.id !== item.id),
+            });
+        } catch (e) {
+            this.setState({ errorMsg: e.message });
+        }
+        // console.log('Item deleted: ', item);
+        // this.setState({
+        //     data: this.state.data.filter((i) => i.id !== item.id), //TODO: remove item
+        // });
     };
 
     render() {
-        const { data, selectedItem, showModal } = this.state;
+        const { data, selectedItem, showModal, errorMsg } = this.state;
         // console.log('data: ', data);
         return (
             <div>
-                <h1>Todo List</h1>
-                <button onClick={this.openNewItemForm}>New Item</button>
+                <div className='header'>
+                    <h1>Todo List</h1>
+                    <button onClick={this.openNewItemForm}>New Item</button>
+                    <p>{errorMsg || '____'}</p>
+                    {/* TODO:proper error message */}
+                </div>
                 <TodoCards
                     data={data}
                     handleEdit={this.handleEditClick}

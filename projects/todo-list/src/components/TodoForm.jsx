@@ -34,9 +34,6 @@ class TodoForm extends React.Component {
         this.setState({
             [fieldName]: text,
         });
-        console.log(
-            'Change detected. State updated ' + fieldName + ' = ' + text
-        );
     };
 
     handleSubmit = (e) => {

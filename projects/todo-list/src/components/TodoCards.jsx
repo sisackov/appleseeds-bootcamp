@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TodoCards = ({ data, handleDelete, handleEdit }) => {
-    console.log('TodoCards: ', data);
+    // console.log('TodoCards: ', data);
     return (
         <div className='todo-cards-container'>
             {data.map((item) => (
