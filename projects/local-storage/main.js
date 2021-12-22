@@ -7,6 +7,13 @@
 //     return itemsMap;
 // }
 
+let clicks = 0;
+const button = document.querySelector('#my-button');
+button.addEventListener('click', (e) => {
+    e.target.style.backgroundColor = clicks % 2 ? 'red' : 'yellow';
+    clicks++;
+});
+
 function saveToLocalStorage(key, value, isMap = false) {
     if (isMap) {
         localStorage.setItem(key, JSON.stringify(Array.from(value.entries())));
@@ -70,3 +77,24 @@ const retrievedArr = getFromLocalStorage('array');
 const retrievedObj = getFromLocalStorage('object');
 console.log(retrievedArr, typeof retrievedArr);
 console.log(retrievedObj, typeof retrievedObj);
+
+/* localStorage.clear();
+const asyncLocalStorage = {
+    setItem: async function (key, value) {
+        console.log('storing:', key);
+        await null;
+        return localStorage.setItem(key, value);
+    },
+    getItem: async function (key) {
+        await null;
+        return localStorage.getItem(key);
+    },
+};
+
+async function storeLotsOfData() {
+    for (let i = 0; i < 60000; i++) {
+        asyncLocalStorage.setItem(`Key-${i + 1}`, `value-${i + 1}`);
+    }
+    console.log('done storing');
+}
+storeLotsOfData(); */
