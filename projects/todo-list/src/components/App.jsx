@@ -1,6 +1,5 @@
 import React from 'react';
 import TodoForm from './TodoForm';
-import { v4 as uuidV4 } from 'uuid';
 import API from '../api/mockApi';
 import TodoCards from './TodoCards';
 import Modal from './Modal';

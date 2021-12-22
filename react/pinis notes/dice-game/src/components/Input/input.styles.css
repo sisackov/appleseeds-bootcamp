@@ -1,0 +1,10 @@
+.input {
+  color: #555;
+  font-size: 18px;
+  font-family: "Lato";
+  text-align: center;
+  padding: 10px;
+  margin: 0 1.5rem;
+  width: 160px;
+  text-transform: uppercase;
+}

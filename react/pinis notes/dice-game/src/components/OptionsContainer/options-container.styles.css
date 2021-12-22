@@ -1,0 +1,7 @@
+.options-container {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+}

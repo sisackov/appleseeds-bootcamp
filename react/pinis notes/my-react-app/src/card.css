@@ -1,0 +1,6 @@
+.card-container{
+    border:1px solid black;
+    display:inline-block;
+    width:10rem;
+    margin:1rem;
+}

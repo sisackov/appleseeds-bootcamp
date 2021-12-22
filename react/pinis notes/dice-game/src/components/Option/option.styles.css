@@ -1,0 +1,30 @@
+.option-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  color: #555;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.option-container:first-child {
+  margin-bottom: 21rem;
+}
+.option-container:hover {
+  font-weight: 600;
+}
+
+.material-icons {
+  color: #eb4d4d;
+  font-size: 40px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
