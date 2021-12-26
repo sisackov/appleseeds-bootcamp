@@ -1,5 +1,5 @@
 import React from 'react';
-import ReadMoreLess from './components/Accordion';
+import ReadMoreLess from './components/ReadMoreLess';
 import './App.css';
 
 const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam error sunt, harum quas tempora dolore deserunt, aliquid illo animi saepe aperiam magni eaque nam dolor esse labore! Nam, tempora deleniti.
