@@ -1,0 +1,16 @@
+.App {
+    margin: 3rem;
+    font-size: 1.4rem;
+}
+
+.read-more-link {
+    color: blueviolet;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.content {
+    color: cornflowerblue;
+    font-weight: 500;
+}
