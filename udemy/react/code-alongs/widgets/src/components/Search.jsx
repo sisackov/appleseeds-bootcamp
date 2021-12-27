@@ -33,7 +33,7 @@ const Search = () => {
 
     //first argument is a function that isn't allowed to be async
     // 3 workarounds:
-    // 1.
+    // 1. call inside the useEffect to async function
     useEffect(() => {
         const search = async () => {
             const { data } = await axios.get(
@@ -49,11 +49,24 @@ const Search = () => {
                 }
             );
 
-            console.log(data.query.search);
             setResults(data.query.search);
         };
 
-        search();
+        const timeoutId = setTimeout(() => {
+            if (term) {
+                search();
+            }
+        }, 1000);
+
+        return () => {
+            /**
+             * on initial component render the useEffect is called.
+             * it returns this clean up function.
+             * on rerender, the clean function will be called first
+             * and only then it will run the execution of the effect.
+             */
+            clearTimeout(timeoutId);
+        };
     }, [term]);
 
     //2 IIFE:
