@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Spinner from './Spinner/Spinner';
 
 const Search = () => {
     const [term, setTerm] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const [fetchedData, setFetchedData] = useState([]);
     const [isClicked, setIsClicked] = useState(false);
+    const [errorMsg, setErrorMsg] = useState(false);
 
     const fetchData = async (query) => {
         const { data } = await axios.get(
@@ -15,11 +18,14 @@ const Search = () => {
 
     useEffect(() => {
         const search = async () => {
+            console.log('initial searching...');
             try {
                 const data = await fetchData('hooks');
                 setFetchedData(data.hits);
+                setIsLoading(false);
+                setErrorMsg('');
             } catch (err) {
-                console.log(err);
+                setErrorMsg(err.message);
             }
         };
 
@@ -27,24 +33,45 @@ const Search = () => {
     }, []); // [] means that the search will only run once
 
     useEffect(() => {
+        console.log('searching...');
         const search = async () => {
+            console.log('searching for ' + term);
             try {
                 const data = await fetchData(term);
                 setFetchedData(data.hits);
                 setIsClicked(false); //enable search only
+                setIsLoading(false);
+                setErrorMsg('');
             } catch (err) {
-                console.log(err);
+                setErrorMsg(err.message);
             }
         };
 
         if (isClicked) {
             search();
         }
-    }, [term, fetchedData, isClicked]);
+    }, [term, isClicked]);
 
-    const renderedResults = fetchedData.map((hit) => {
-        return <div key={hit.objectID}>{hit.title}</div>;
-    });
+    useEffect(() => {
+        if (isClicked) {
+            setIsLoading(true);
+        }
+    }, [isClicked]);
+
+    const renderData = () =>
+        errorMsg ? (
+            <div>{errorMsg}</div>
+        ) : (
+            fetchedData.map((hit) => {
+                return (
+                    <div key={hit.objectID}>
+                        <a href={hit.url} target='_blank' rel='noreferrer'>
+                            {hit.title}
+                        </a>
+                    </div>
+                );
+            })
+        );
 
     return (
         <div>
@@ -57,9 +84,14 @@ const Search = () => {
                         onChange={(e) => setTerm(e.target.value)}
                         className='input'
                     />
+                    <button onClick={() => setIsClicked(true)}>Search</button>
                 </div>
             </div>
-            <div className='ui celled list'>{renderedResults}</div>
+            {isLoading ? (
+                <Spinner />
+            ) : (
+                <div className='ui celled list'>{renderData()}</div>
+            )}
         </div>
     );
 };
