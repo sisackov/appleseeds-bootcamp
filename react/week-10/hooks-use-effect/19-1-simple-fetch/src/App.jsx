@@ -1,36 +1,42 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
 function App() {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState({});
 
     useEffect(() => {
         function fetchData() {
-            try {
-                const response = fetch(
-                    'https://api.github.com/users/mosh-hamedani/repos'
-                );
-                console.log(response);
-                setData(response.data);
-            } catch (error) {
-                console.log(error);
-                setData(error.message);
-            }
+            fetch('https://swapi.dev/api/films/1/')
+                .then((response) => response.json())
+                .then((dt) => {
+                    console.log(dt);
+                    setData(dt);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
         }
 
-        fetchData();
+        if (!data.title) {
+            //this if statement should prevent the useEffect from running multiple times
+            fetchData();
+        }
     }, [data]);
 
-    const renderData = data.map((item, index) => {
+    const renderData = () => {
+        if (!data.title) return null;
+        const { title, director, opening_crawl } = data;
+        console.log(title);
         return (
-            <div key={index}>
-                <h3>{item.title}</h3>
-                <p>{item.content}</p>
-            </div>
+            <Fragment>
+                <h1>{title}</h1>
+                <h3>Directed by: {director}</h3>
+                <p>{opening_crawl}</p>
+            </Fragment>
         );
-    });
+    };
 
-    return <div className='App'>{renderData}</div>;
+    return <div className='App'>{renderData()}</div>;
 }
 
 export default App;
