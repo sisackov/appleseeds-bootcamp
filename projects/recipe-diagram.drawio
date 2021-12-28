@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-27T22:15:58.073Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="kKHbb1YFnnwHqlEeGZH3" version="16.0.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-12-28T07:39:06.129Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="8S9t7kkGQeBI-HdFmhQW" version="16.0.3" type="github" pages="6">
   <diagram id="piDafpqhtRUU5qUU-vj8" name="LandingPage pre login">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -177,7 +177,7 @@
         <mxCell id="A4hFYFQdtThw41aiZ-6s-3" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="A4hFYFQdtThw41aiZ-6s-2">
           <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="A4hFYFQdtThw41aiZ-6s-4" value="https://www.recipe-book.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="A4hFYFQdtThw41aiZ-6s-2">
+        <mxCell id="A4hFYFQdtThw41aiZ-6s-4" value="https://www.recipe-book.com/" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="A4hFYFQdtThw41aiZ-6s-2">
           <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="A4hFYFQdtThw41aiZ-6s-6" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="A4hFYFQdtThw41aiZ-6s-2">
@@ -278,6 +278,189 @@
         </mxCell>
         <mxCell id="A4hFYFQdtThw41aiZ-6s-34" value="Hamburger menu" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="A4hFYFQdtThw41aiZ-6s-1">
           <mxGeometry x="1320" y="230" width="160" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Copy of LandingPage pre login" id="_8DfEyzKzrYGPO0qsyyl">
+    <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-0" />
+        <mxCell id="l9wUPMvyjFMloAoam6aN-1" parent="l9wUPMvyjFMloAoam6aN-0" />
+        <mxCell id="l9wUPMvyjFMloAoam6aN-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-1">
+          <mxGeometry x="10" y="10" width="1150" height="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-3" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-4" value="https://www.recipe-book.com/recipe/15158" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-5" value="" style="rounded=1;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12;fillColor=#008CFF;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="10" y="117" width="80" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-6" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="-10" y="1215" width="1150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-7" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/LinkedIn-128.png;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="870" y="1260" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-8" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/Facebook-128.png;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="920" y="1260" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-9" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/Twitter-128.png;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="970" y="1260" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-11" value="Recipe Title" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=37;fontFamily=Tahoma;fillColor=orange;fontColor=#FFFFFF;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="415" y="170" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-21" value="&lt;div style=&quot;text-align: center&quot;&gt;&lt;span style=&quot;font-size: 18px&quot;&gt;Description&lt;/span&gt;&lt;/div&gt;&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;br&gt;&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" style="text;spacingTop=-5;whiteSpace=wrap;html=1;align=left;fontSize=12;fontFamily=Helvetica;fillColor=#DBFEFF;strokeColor=none;shadow=1;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="370" width="700" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-25" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="30" y="117" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-0" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=10;fillColor=#ffffff;strokeColor=#666666;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="770" y="117" width="370" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-1" value="Search" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=0;fontSize=17;fontColor=#666666;fontStyle=1;resizeHeight=1;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-0">
+          <mxGeometry width="365" height="50" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-2" value="Logout" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rightButton;rSize=10;fontSize=17;fontColor=#666666;fontStyle=1;resizeHeight=1;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-0">
+          <mxGeometry x="1" width="125" height="50" relative="1" as="geometry">
+            <mxPoint x="-125" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-3" value="Add Recipe" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.leftButton;rSize=10;fontSize=17;fontColor=black;fontStyle=1;fillColor=#fff;strokeColor=#008cff;resizeHeight=1;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-0">
+          <mxGeometry width="130" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-6" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="30" y="150" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-9" value="Ingredients #" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;strokeColor=#666666;mainText=;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="230" y="270" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-11" value="Calories #" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;strokeColor=#666666;mainText=;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="610" y="270" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-10" value="Preparation Time" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;strokeColor=#666666;mainText=;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="430" y="270" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-12" value="Add to&amp;nbsp;&lt;br&gt;Collections" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#33A64C;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="800" y="270" width="85" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-14" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.shareIcon;fontSize=18;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="30" y="370" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-16" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.shareIcon;fontSize=18;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="30" y="440" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-15" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.shareIcon;fontSize=18;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="30" y="510" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-13" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.shareIcon;fontSize=18;fillColor=#E0D977;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="30" y="580" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-17" value="Ingredient and quantity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#CED4DA;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#7D868C;align=left;spacing=15;spacingLeft=40;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="840" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-18" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.leftButton;strokeColor=inherit;gradientColor=inherit;fontColor=inherit;fillColor=#E9ECEF;rSize=5;perimeter=none;whiteSpace=wrap;resizeHeight=1;fontSize=14;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-17">
+          <mxGeometry width="33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-19" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;strokeColor=#A6A6A6;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;fontSize=18;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-18">
+          <mxGeometry x="0.5" y="0.5" width="10" height="10" relative="1" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-20" value="Ingredients" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#343A40;strokeWidth=1;fillColor=none;fontColor=#343A40;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="460" y="780" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-36" value="Ingredient and quantity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#CED4DA;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#7D868C;align=left;spacing=15;spacingLeft=40;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="1000" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-37" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.leftButton;strokeColor=inherit;gradientColor=inherit;fontColor=inherit;fillColor=#E9ECEF;rSize=5;perimeter=none;whiteSpace=wrap;resizeHeight=1;fontSize=14;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-36">
+          <mxGeometry width="33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-38" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;strokeColor=#A6A6A6;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;fontSize=18;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-37">
+          <mxGeometry x="0.5" y="0.5" width="10" height="10" relative="1" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-30" value="Ingredient and quantity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#CED4DA;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#7D868C;align=left;spacing=15;spacingLeft=40;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="920" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-31" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.leftButton;strokeColor=inherit;gradientColor=inherit;fontColor=inherit;fillColor=#E9ECEF;rSize=5;perimeter=none;whiteSpace=wrap;resizeHeight=1;fontSize=14;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-30">
+          <mxGeometry width="33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-32" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;strokeColor=#A6A6A6;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;fontSize=18;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-31">
+          <mxGeometry x="0.5" y="0.5" width="10" height="10" relative="1" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-21" value="Ingredient and quantity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#CED4DA;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#7D868C;align=left;spacing=15;spacingLeft=40;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="880" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-22" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.leftButton;strokeColor=inherit;gradientColor=inherit;fontColor=inherit;fillColor=#E9ECEF;rSize=5;perimeter=none;whiteSpace=wrap;resizeHeight=1;fontSize=14;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-21">
+          <mxGeometry width="33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-23" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;strokeColor=#A6A6A6;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;fontSize=18;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-22">
+          <mxGeometry x="0.5" y="0.5" width="10" height="10" relative="1" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-24" value="Ingredient and quantity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#CED4DA;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#7D868C;align=left;spacing=15;spacingLeft=40;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="960" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-25" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.leftButton;strokeColor=inherit;gradientColor=inherit;fontColor=inherit;fillColor=#E9ECEF;rSize=5;perimeter=none;whiteSpace=wrap;resizeHeight=1;fontSize=14;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-24">
+          <mxGeometry width="33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-26" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;strokeColor=#A6A6A6;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;fontSize=18;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-25">
+          <mxGeometry x="0.5" y="0.5" width="10" height="10" relative="1" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-27" value="Ingredient and quantity" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#CED4DA;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#7D868C;align=left;spacing=15;spacingLeft=40;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="200" y="1040" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-28" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.leftButton;strokeColor=inherit;gradientColor=inherit;fontColor=inherit;fillColor=#E9ECEF;rSize=5;perimeter=none;whiteSpace=wrap;resizeHeight=1;fontSize=14;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-27">
+          <mxGeometry width="33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-29" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;strokeColor=#A6A6A6;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;fontSize=18;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-28">
+          <mxGeometry x="0.5" y="0.5" width="10" height="10" relative="1" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-39" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="860" y="840" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-43" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="860" y="1040" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-42" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="860" y="1000" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-41" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="860" y="960" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-40" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="860" y="920" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-44" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="860" y="880" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-17" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#eeeeee;shadow=0;fontSize=13;fontColor=#0066CC;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="475" y="1260" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l9wUPMvyjFMloAoam6aN-18" value="Contact Us" style="shape=rect;strokeColor=none;fillColor=none;fontSize=12;fontColor=#2196F3;dashed=0;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-17">
+          <mxGeometry width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-4" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-1">
+          <mxGeometry x="40" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-5" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-1">
+          <mxGeometry x="40" y="150" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
