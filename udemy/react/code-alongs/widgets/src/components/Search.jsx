@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const Search = () => {
     const [term, setTerm] = useState('programming');
+    const [debouncedTerm, setDebouncedTerm] = useState(term);
     const [results, setResults] = useState([]);
 
     /*     console.log('I RUN WITH EVERY RENDER');
@@ -31,6 +32,22 @@ const Search = () => {
         };
     }, [term]); */
 
+    useEffect(() => {
+        const timerId = setTimeout(() => {
+            setDebouncedTerm(term);
+        }, 1000);
+
+        return () => {
+            /**
+             * on initial component render the useEffect is called.
+             * it returns this clean up function.
+             * on rerender, the clean function will be called first
+             * and only then it will run the execution of the effect.
+             */
+            clearTimeout(timerId);
+        };
+    }, [term]);
+
     //first argument is a function that isn't allowed to be async
     // 3 workarounds:
     // 1. call inside the useEffect to async function
@@ -44,7 +61,7 @@ const Search = () => {
                         list: 'search',
                         origin: '*',
                         format: 'json',
-                        srsearch: term,
+                        srsearch: debouncedTerm,
                     },
                 }
             );
@@ -52,22 +69,10 @@ const Search = () => {
             setResults(data.query.search);
         };
 
-        const timeoutId = setTimeout(() => {
-            if (term) {
-                search();
-            }
-        }, 1000);
-
-        return () => {
-            /**
-             * on initial component render the useEffect is called.
-             * it returns this clean up function.
-             * on rerender, the clean function will be called first
-             * and only then it will run the execution of the effect.
-             */
-            clearTimeout(timeoutId);
-        };
-    }, [term]);
+        if (debouncedTerm) {
+            search();
+        }
+    }, [debouncedTerm]);
 
     //2 IIFE:
     // useEffect(() => {

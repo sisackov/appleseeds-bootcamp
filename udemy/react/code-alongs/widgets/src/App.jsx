@@ -1,6 +1,7 @@
 import React from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
+import Translate from './components/Translate';
 
 const items = [
     {
@@ -17,11 +18,24 @@ const items = [
     },
 ];
 
+// const options = [
+//     {
+//         label: 'The Color Red',
+//         value: 'red',
+//     },
+//     {
+//         label: 'The Color Green',
+//         value: 'green',
+//     },
+//     {
+//         label: 'A Shade of Blue',
+//         value: 'blue',
+//     },
+// ];
 const App = () => {
     return (
         <div>
-            <Search />
-            <Accordion items={items} />
+            <Translate />
         </div>
     );
 };
