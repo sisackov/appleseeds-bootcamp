@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-28T08:14:18.500Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="OsfoyIzqg323bEogR12F" version="16.0.3" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-12-28T08:26:24.667Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="0M6aYeCwSX9haFP1q2iI" version="16.0.3" type="github" pages="8">
   <diagram id="piDafpqhtRUU5qUU-vj8" name="LandingPage pre login">
     <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="8962rQQDY3VNNf6We3Pp-2" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" parent="8962rQQDY3VNNf6We3Pp-1" vertex="1">
           <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8962rQQDY3VNNf6We3Pp-3" value="https://www.recipe-book.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" parent="8962rQQDY3VNNf6We3Pp-1" vertex="1">
+        <mxCell id="8962rQQDY3VNNf6We3Pp-3" value="https://www.recipe-book.com/" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" parent="8962rQQDY3VNNf6We3Pp-1" vertex="1">
           <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="8962rQQDY3VNNf6We3Pp-14" value="Login" style="rounded=1;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12;fillColor=#008CFF;" parent="8962rQQDY3VNNf6We3Pp-1" vertex="1">
@@ -455,12 +455,6 @@
         <mxCell id="sRi73DZImYLgM8-QmXGX-44" value="Add To Cart" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#6C767D;fontColor=#FFFFFF;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;fontSize=18;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
           <mxGeometry x="860" y="880" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="sRi73DZImYLgM8-QmXGX-45" value="* Iron: 35 mg&lt;br&gt;* Cholesterol: 12 g&lt;br&gt;* Fiber: 0.3 g&lt;br&gt;...&lt;br&gt;...&lt;br&gt;..." style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#33A64C;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#33A64C;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
-          <mxGeometry x="981" y="460" width="250" height="260" as="geometry" />
-        </mxCell>
-        <mxCell id="sRi73DZImYLgM8-QmXGX-46" value="Nutritional Value:" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#33A64C;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=left;spacing=20;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-45">
-          <mxGeometry width="250" height="50" relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="l9wUPMvyjFMloAoam6aN-17" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#eeeeee;shadow=0;fontSize=13;fontColor=#0066CC;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
           <mxGeometry x="460" y="1440" width="160" height="40" as="geometry" />
         </mxCell>
@@ -513,6 +507,18 @@
         <mxCell id="sRi73DZImYLgM8-QmXGX-62" value="Delete" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#DB2843;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
           <mxGeometry x="1050" y="270" width="80" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="GHrj21Im-S8EMA634I_t-0" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=bottom;align=left;spacing=20;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="950" y="340" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="GHrj21Im-S8EMA634I_t-1" value="Recipe Image" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#868E96;strokeColor=#DFDFDF;fontColor=#DEE2E6;resizeWidth=1;fontSize=18;" vertex="1" parent="GHrj21Im-S8EMA634I_t-0">
+          <mxGeometry width="250" height="180" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-45" value="* Iron: 35 mg&lt;br&gt;* Cholesterol: 12 g&lt;br&gt;* Fiber: 0.3 g&lt;br&gt;...&lt;br&gt;...&lt;br&gt;..." style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#33A64C;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#33A64C;verticalAlign=bottom;align=left;spacing=20;spacingBottom=0;fontSize=14;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-2">
+          <mxGeometry x="950" y="520" width="250" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="sRi73DZImYLgM8-QmXGX-46" value="Nutritional Value:" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#F7F7F7;strokeColor=#33A64C;fontColor=#6C767D;resizeWidth=1;fontSize=18;align=left;spacing=20;" vertex="1" parent="sRi73DZImYLgM8-QmXGX-45">
+          <mxGeometry width="250" height="50" relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="sRi73DZImYLgM8-QmXGX-4" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="l9wUPMvyjFMloAoam6aN-1">
           <mxGeometry x="40" y="140" width="40" height="20" as="geometry" />
         </mxCell>
@@ -554,7 +560,7 @@
         <mxCell id="C5IG2dawS6XRXcs8CdQJ-3" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="C5IG2dawS6XRXcs8CdQJ-2">
           <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="C5IG2dawS6XRXcs8CdQJ-4" value="https://www.recipe-book.com/recipe/15158" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="C5IG2dawS6XRXcs8CdQJ-2">
+        <mxCell id="C5IG2dawS6XRXcs8CdQJ-4" value="https://www.recipe-book.com/recipe/edit/15158" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="C5IG2dawS6XRXcs8CdQJ-2">
           <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="C5IG2dawS6XRXcs8CdQJ-5" value="" style="rounded=1;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12;fillColor=#008CFF;" vertex="1" parent="C5IG2dawS6XRXcs8CdQJ-2">
@@ -754,6 +760,130 @@
         </mxCell>
         <mxCell id="C5IG2dawS6XRXcs8CdQJ-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="C5IG2dawS6XRXcs8CdQJ-1" source="C5IG2dawS6XRXcs8CdQJ-92" target="C5IG2dawS6XRXcs8CdQJ-105">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Recipe collections" id="seX_dTxuo4sYZb08rMGJ">
+    <mxGraphModel dx="1662" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-0" />
+        <mxCell id="068c3YCEUsGmYAaDvL8m-1" parent="068c3YCEUsGmYAaDvL8m-0" />
+        <mxCell id="068c3YCEUsGmYAaDvL8m-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-1">
+          <mxGeometry x="10" y="10" width="1280" height="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-3" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-4" value="https://www.recipe-book.com/recipe/15158" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-5" value="" style="rounded=1;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12;fillColor=#008CFF;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="10" y="117" width="80" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-6" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="-10" y="1420" width="1150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-7" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/LinkedIn-128.png;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="860" y="1450" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-8" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/Facebook-128.png;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="920" y="1450" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-9" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/Twitter-128.png;fillColor=#008CFF;fontSize=13;fontColor=#0066CC;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="990" y="1450" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-10" value="My Collections" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=37;fontFamily=Tahoma;fillColor=orange;fontColor=#FFFFFF;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="460" y="180" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-12" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="30" y="117" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-17" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="30" y="150" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-54" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#eeeeee;shadow=0;fontSize=13;fontColor=#0066CC;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="460" y="1440" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-55" value="Contact Us" style="shape=rect;strokeColor=none;fillColor=none;fontSize=12;fontColor=#2196F3;dashed=0;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-54">
+          <mxGeometry width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-13" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=10;fillColor=#ffffff;strokeColor=#666666;fontSize=18;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="890" y="120" width="370" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-14" value="Search" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rrect;rSize=0;fontSize=17;fontColor=#666666;fontStyle=1;resizeHeight=1;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-13">
+          <mxGeometry width="365" height="50" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-15" value="Logout" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.rightButton;rSize=10;fontSize=17;fontColor=#666666;fontStyle=1;resizeHeight=1;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-13">
+          <mxGeometry x="1" width="125" height="50" relative="1" as="geometry">
+            <mxPoint x="-125" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-16" value="Add Recipe" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.leftButton;rSize=10;fontSize=17;fontColor=black;fontStyle=1;fillColor=#fff;strokeColor=#008cff;resizeHeight=1;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-13">
+          <mxGeometry width="130" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-10" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Collection title&lt;/font&gt;&lt;/b&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;Collection descriptions" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=bottom;align=left;spacing=20;spacingBottom=50;fontSize=14;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="110" y="280" width="1000" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-11" value="Image cap" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#868E96;strokeColor=#DFDFDF;fontColor=#DEE2E6;resizeWidth=1;fontSize=18;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-10">
+          <mxGeometry width="450" height="190" relative="1" as="geometry">
+            <mxPoint x="550" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-12" value="See Recipes of this collection" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#0085FC;strokeColor=none;fontColor=#ffffff;resizeWidth=1;fontSize=14;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-10">
+          <mxGeometry y="1" width="480" height="40" relative="1" as="geometry">
+            <mxPoint x="20" y="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-13" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Breakfast Collection&lt;/font&gt;&lt;/b&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;Collection descriptions" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=bottom;align=left;spacing=20;spacingBottom=50;fontSize=14;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="110" y="480" width="1000" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-14" value="Image cap" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#868E96;strokeColor=#DFDFDF;fontColor=#DEE2E6;resizeWidth=1;fontSize=18;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-13">
+          <mxGeometry width="450" height="190" relative="1" as="geometry">
+            <mxPoint x="550" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-15" value="See Recipes of this collection" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#0085FC;strokeColor=none;fontColor=#ffffff;resizeWidth=1;fontSize=14;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-13">
+          <mxGeometry y="1" width="480" height="40" relative="1" as="geometry">
+            <mxPoint x="20" y="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-16" value="Add Collection" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#1CA5B8;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="120" y="200" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-20" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Lunch Collection&lt;/font&gt;&lt;/b&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;Collection descriptions" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=bottom;align=left;spacing=20;spacingBottom=50;fontSize=14;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="110" y="690" width="1000" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-21" value="Image cap" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#868E96;strokeColor=#DFDFDF;fontColor=#DEE2E6;resizeWidth=1;fontSize=18;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-20">
+          <mxGeometry width="450" height="190" relative="1" as="geometry">
+            <mxPoint x="550" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-22" value="See Recipes of this collection" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#0085FC;strokeColor=none;fontColor=#ffffff;resizeWidth=1;fontSize=14;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-20">
+          <mxGeometry y="1" width="480" height="40" relative="1" as="geometry">
+            <mxPoint x="20" y="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-17" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Dinner Collection&lt;/font&gt;&lt;/b&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;&lt;br style=&quot;font-size: 14px&quot;&gt;Collection descriptions" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=bottom;align=left;spacing=20;spacingBottom=50;fontSize=14;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-2">
+          <mxGeometry x="110" y="900" width="1000" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-18" value="Image cap" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#868E96;strokeColor=#DFDFDF;fontColor=#DEE2E6;resizeWidth=1;fontSize=18;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-17">
+          <mxGeometry width="450" height="190" relative="1" as="geometry">
+            <mxPoint x="550" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UVwd1bNkqzNK1sAu_6HU-19" value="See Recipes of this collection" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;perimeter=none;whiteSpace=wrap;fillColor=#0085FC;strokeColor=none;fontColor=#ffffff;resizeWidth=1;fontSize=14;" vertex="1" parent="UVwd1bNkqzNK1sAu_6HU-17">
+          <mxGeometry y="1" width="480" height="40" relative="1" as="geometry">
+            <mxPoint x="20" y="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-70" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-1">
+          <mxGeometry x="40" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="068c3YCEUsGmYAaDvL8m-71" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=3;shape=mxgraph.mockup.markup.line;strokeColor=#999999;fontSize=36;fillColor=#B9E0A5;" vertex="1" parent="068c3YCEUsGmYAaDvL8m-1">
+          <mxGeometry x="40" y="150" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
