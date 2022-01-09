@@ -1,0 +1,332 @@
+<ref *83> {
+  version: '13.7.0',
+  toDate: <ref *1> [Function: toDate] { default: [Circular *1] },
+  toFloat: <ref *2> [Function: toFloat] { default: [Circular *2] },
+  toInt: <ref *3> [Function: toInt] { default: [Circular *3] },
+  toBoolean: <ref *4> [Function: toBoolean] { default: [Circular *4] },
+  equals: <ref *5> [Function: equals] { default: [Circular *5] },
+  contains: <ref *6> [Function: contains] { default: [Circular *6] },
+  matches: <ref *7> [Function: matches] { default: [Circular *7] },
+  isEmail: <ref *8> [Function: isEmail] { default: [Circular *8] },
+  isURL: <ref *9> [Function: isURL] { default: [Circular *9] },
+  isMACAddress: <ref *10> [Function: isMACAddress] {
+    default: [Circular *10]
+  },
+  isIP: <ref *11> [Function: isIP] { default: [Circular *11] },
+  isIPRange: <ref *12> [Function: isIPRange] { default: [Circular *12] },
+  isFQDN: <ref *13> [Function: isFQDN] { default: [Circular *13] },
+  isBoolean: <ref *14> [Function: isBoolean] { default: [Circular *14] },
+  isIBAN: [Function: isIBAN],
+  isBIC: <ref *15> [Function: isBIC] { default: [Circular *15] },
+  isAlpha: [Function: isAlpha],
+  isAlphaLocales: [
+    'en-US', 'az-AZ',       'bg-BG', 'cs-CZ',
+    'da-DK', 'de-DE',       'el-GR', 'es-ES',
+    'fa-IR', 'fi-FI',       'fr-FR', 'it-IT',
+    'nb-NO', 'nl-NL',       'nn-NO', 'hu-HU',
+    'pl-PL', 'pt-PT',       'ru-RU', 'sl-SI',
+    'sk-SK', 'sr-RS@latin', 'sr-RS', 'sv-SE',
+    'th-TH', 'tr-TR',       'uk-UA', 'vi-VN',
+    'ku-IQ', 'ar',          'he',    'fa',
+    'hi-IN', 'en-AU',       'en-GB', 'en-HK',
+    'en-IN', 'en-NZ',       'en-ZA', 'en-ZM',
+    'ar-AE', 'ar-BH',       'ar-DZ', 'ar-EG',
+    'ar-IQ', 'ar-JO',       'ar-KW', 'ar-LB',
+    'ar-LY', 'ar-MA',       'ar-QM', 'ar-QA',
+    'ar-SA', 'ar-SD',       'ar-SY', 'ar-TN',
+    'ar-YE', 'fr-CA',       'pt-BR', 'pl-Pl',
+    'fa-AF'
+  ],
+  isAlphanumeric: [Function: isAlphanumeric],
+  isAlphanumericLocales: [
+    'en-US',       'az-AZ', 'bg-BG', 'cs-CZ',
+    'da-DK',       'de-DE', 'el-GR', 'es-ES',
+    'fi-FI',       'fr-FR', 'it-IT', 'hu-HU',
+    'nb-NO',       'nl-NL', 'nn-NO', 'pl-PL',
+    'pt-PT',       'ru-RU', 'sl-SI', 'sk-SK',
+    'sr-RS@latin', 'sr-RS', 'sv-SE', 'th-TH',
+    'tr-TR',       'uk-UA', 'ku-IQ', 'vi-VN',
+    'ar',          'he',    'fa',    'hi-IN',
+    'en-AU',       'en-GB', 'en-HK', 'en-IN',
+    'en-NZ',       'en-ZA', 'en-ZM', 'ar-AE',
+    'ar-BH',       'ar-DZ', 'ar-EG', 'ar-IQ',
+    'ar-JO',       'ar-KW', 'ar-LB', 'ar-LY',
+    'ar-MA',       'ar-QM', 'ar-QA', 'ar-SA',
+    'ar-SD',       'ar-SY', 'ar-TN', 'ar-YE',
+    'fa-IR',       'fa-AF', 'fr-CA', 'pt-BR',
+    'pl-Pl'
+  ],
+  isNumeric: <ref *16> [Function: isNumeric] { default: [Circular *16] },
+  isPassportNumber: <ref *17> [Function: isPassportNumber] {
+    default: [Circular *17]
+  },
+  isPort: <ref *18> [Function: isPort] { default: [Circular *18] },
+  isLowercase: <ref *19> [Function: isLowercase] {
+    default: [Circular *19]
+  },
+  isUppercase: <ref *20> [Function: isUppercase] {
+    default: [Circular *20]
+  },
+  isAscii: <ref *21> [Function: isAscii] { default: [Circular *21] },
+  isFullWidth: [Function: isFullWidth],
+  isHalfWidth: [Function: isHalfWidth],
+  isVariableWidth: <ref *22> [Function: isVariableWidth] {
+    default: [Circular *22]
+  },
+  isMultibyte: <ref *23> [Function: isMultibyte] {
+    default: [Circular *23]
+  },
+  isSemVer: <ref *24> [Function: isSemVer] { default: [Circular *24] },
+  isSurrogatePair: <ref *25> [Function: isSurrogatePair] {
+    default: [Circular *25]
+  },
+  isInt: <ref *26> [Function: isInt] { default: [Circular *26] },
+  isIMEI: <ref *27> [Function: isIMEI] { default: [Circular *27] },
+  isFloat: [Function: isFloat],
+  isFloatLocales: [
+    'en-US',       'ar',    'en-AU', 'en-GB',
+    'en-HK',       'en-IN', 'en-NZ', 'en-ZA',
+    'en-ZM',       'ar-AE', 'ar-BH', 'ar-DZ',
+    'ar-EG',       'ar-IQ', 'ar-JO', 'ar-KW',
+    'ar-LB',       'ar-LY', 'ar-MA', 'ar-QM',
+    'ar-QA',       'ar-SA', 'ar-SD', 'ar-SY',
+    'ar-TN',       'ar-YE', 'fa-IR', 'fa-AF',
+    'bg-BG',       'cs-CZ', 'da-DK', 'de-DE',
+    'el-GR',       'es-ES', 'fr-CA', 'fr-FR',
+    'id-ID',       'it-IT', 'ku-IQ', 'hi-IN',
+    'hu-HU',       'nb-NO', 'nn-NO', 'nl-NL',
+    'pl-PL',       'pt-PT', 'ru-RU', 'sl-SI',
+    'sr-RS@latin', 'sr-RS', 'sv-SE', 'tr-TR',
+    'uk-UA',       'vi-VN', 'pt-BR', 'pl-Pl'
+  ],
+  isDecimal: <ref *28> [Function: isDecimal] { default: [Circular *28] },
+  isHexadecimal: <ref *29> [Function: isHexadecimal] {
+    default: [Circular *29]
+  },
+  isOctal: <ref *30> [Function: isOctal] { default: [Circular *30] },
+  isDivisibleBy: <ref *31> [Function: isDivisibleBy] {
+    default: [Circular *31]
+  },
+  isHexColor: <ref *32> [Function: isHexColor] { default: [Circular *32] },
+  isRgbColor: <ref *33> [Function: isRgbColor] { default: [Circular *33] },
+  isHSL: <ref *34> [Function: isHSL] { default: [Circular *34] },
+  isISRC: <ref *35> [Function: isISRC] { default: [Circular *35] },
+  isMD5: <ref *36> [Function: isMD5] { default: [Circular *36] },
+  isHash: <ref *37> [Function: isHash] { default: [Circular *37] },
+  isJWT: <ref *38> [Function: isJWT] { default: [Circular *38] },
+  isJSON: <ref *39> [Function: isJSON] { default: [Circular *39] },
+  isEmpty: <ref *40> [Function: isEmpty] { default: [Circular *40] },
+  isLength: <ref *41> [Function: isLength] { default: [Circular *41] },
+  isLocale: <ref *42> [Function: isLocale] { default: [Circular *42] },
+  isByteLength: <ref *43> [Function: isByteLength] {
+    default: [Circular *43]
+  },
+  isUUID: <ref *44> [Function: isUUID] { default: [Circular *44] },
+  isMongoId: <ref *45> [Function: isMongoId] { default: [Circular *45] },
+  isAfter: <ref *46> [Function: isAfter] { default: [Circular *46] },
+  isBefore: <ref *47> [Function: isBefore] { default: [Circular *47] },
+  isIn: <ref *48> [Function: isIn] { default: [Circular *48] },
+  isCreditCard: <ref *49> [Function: isCreditCard] {
+    default: [Circular *49]
+  },
+  isIdentityCard: <ref *50> [Function: isIdentityCard] {
+    default: [Circular *50]
+  },
+  isEAN: <ref *51> [Function: isEAN] { default: [Circular *51] },
+  isISIN: <ref *52> [Function: isISIN] { default: [Circular *52] },
+  isISBN: <ref *53> [Function: isISBN] { default: [Circular *53] },
+  isISSN: <ref *54> [Function: isISSN] { default: [Circular *54] },
+  isMobilePhone: [Function: isMobilePhone],
+  isMobilePhoneLocales: [
+    'am-AM', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-LB', 'ar-EG', 'ar-IQ',
+    'ar-JO', 'ar-KW', 'ar-LY', 'ar-MA', 'ar-OM', 'ar-PS', 'ar-SA',
+    'ar-SY', 'ar-TN', 'az-AZ', 'bs-BA', 'be-BY', 'bg-BG', 'bn-BD',
+    'ca-AD', 'cs-CZ', 'da-DK', 'de-DE', 'de-AT', 'de-CH', 'de-LU',
+    'dv-MV', 'el-GR', 'en-AU', 'en-BM', 'en-GB', 'en-GG', 'en-GH',
+    'en-GY', 'en-HK', 'en-MO', 'en-IE', 'en-IN', 'en-KE', 'en-KI',
+    'en-MT', 'en-MU', 'en-NA', 'en-NG', 'en-NZ', 'en-PK', 'en-PH',
+    'en-RW', 'en-SG', 'en-SL', 'en-TZ', 'en-UG', 'en-US', 'en-ZA',
+    'en-ZM', 'en-ZW', 'en-BW', 'es-AR', 'es-BO', 'es-CO', 'es-CL',
+    'es-CR', 'es-CU', 'es-DO', 'es-HN', 'es-EC', 'es-ES', 'es-PE',
+    'es-MX', 'es-PA', 'es-PY', 'es-SV', 'es-UY', 'es-VE', 'et-EE',
+    'fa-IR', 'fi-FI', 'fj-FJ', 'fo-FO', 'fr-BF', 'fr-CM', 'fr-FR',
+    'fr-GF', 'fr-GP', 'fr-MQ', 'fr-PF', 'fr-RE', 'he-IL', 'hu-HU',
+    'id-ID', 'it-IT', 'it-SM', 'ja-JP', 'ka-GE', 'kk-KZ', 'kl-GL',
+    'ko-KR', 'lt-LT',
+    ... 38 more items
+  ],
+  isPostalCode: [Function: isPostalCode],
+  isPostalCodeLocales: [
+    'AD', 'AT', 'AU', 'AZ', 'BE', 'BG', 'BR',
+    'BY', 'CA', 'CH', 'CN', 'CZ', 'DE', 'DK',
+    'DO', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB',
+    'GR', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL',
+    'IN', 'IR', 'IS', 'IT', 'JP', 'KE', 'KR',
+    'LI', 'LT', 'LU', 'LV', 'LK', 'MX', 'MT',
+    'MY', 'NL', 'NO', 'NP', 'NZ', 'PL', 'PR',
+    'PT', 'RO', 'RU', 'SA', 'SE', 'SG', 'SI',
+    'SK', 'TH', 'TN', 'TW', 'UA', 'US', 'ZA',
+    'ZM'
+  ],
+  isEthereumAddress: <ref *55> [Function: isEthereumAddress] {
+    default: [Circular *55]
+  },
+  isCurrency: <ref *56> [Function: isCurrency] { default: [Circular *56] },
+  isBtcAddress: <ref *57> [Function: isBtcAddress] {
+    default: [Circular *57]
+  },
+  isISO8601: <ref *58> [Function: isISO8601] { default: [Circular *58] },
+  isRFC3339: <ref *59> [Function: isRFC3339] { default: [Circular *59] },
+  isISO31661Alpha2: [Function: isISO31661Alpha2],
+  isISO31661Alpha3: <ref *60> [Function: isISO31661Alpha3] {
+    default: [Circular *60]
+  },
+  isISO4217: [Function: isISO4217],
+  isBase32: <ref *61> [Function: isBase32] { default: [Circular *61] },
+  isBase58: <ref *62> [Function: isBase58] { default: [Circular *62] },
+  isBase64: <ref *63> [Function: isBase64] { default: [Circular *63] },
+  isDataURI: <ref *64> [Function: isDataURI] { default: [Circular *64] },
+  isMagnetURI: <ref *65> [Function: isMagnetURI] {
+    default: [Circular *65]
+  },
+  isMimeType: <ref *66> [Function: isMimeType] { default: [Circular *66] },
+  isLatLong: <ref *67> [Function: isLatLong] { default: [Circular *67] },
+  ltrim: <ref *68> [Function: ltrim] { default: [Circular *68] },
+  rtrim: <ref *69> [Function: rtrim] { default: [Circular *69] },
+  trim: <ref *70> [Function: trim] { default: [Circular *70] },
+  escape: <ref *71> [Function: escape] { default: [Circular *71] },
+  unescape: <ref *72> [Function: unescape] { default: [Circular *72] },
+  stripLow: <ref *73> [Function: stripLow] { default: [Circular *73] },
+  whitelist: <ref *74> [Function: whitelist] { default: [Circular *74] },
+  blacklist: <ref *75> [Function: blacklist] { default: [Circular *75] },
+  isWhitelisted: <ref *76> [Function: isWhitelisted] {
+    default: [Circular *76]
+  },
+  normalizeEmail: <ref *77> [Function: normalizeEmail] {
+    default: [Circular *77]
+  },
+  toString: [Function: toString],
+  isSlug: <ref *78> [Function: isSlug] { default: [Circular *78] },
+  isStrongPassword: <ref *79> [Function: isStrongPassword] {
+    default: [Circular *79]
+  },
+  isTaxID: <ref *80> [Function: isTaxID] { default: [Circular *80] },
+  isDate: <ref *81> [Function: isDate] { default: [Circular *81] },
+  isLicensePlate: <ref *82> [Function: isLicensePlate] {
+    default: [Circular *82]
+  },
+  isVAT: [Function: isVAT],
+  ibanLocales: [
+    'AD', 'AE', 'AL', 'AT', 'AZ', 'BA', 'BE', 'BG',
+    'BH', 'BR', 'BY', 'CH', 'CR', 'CY', 'CZ', 'DE',
+    'DK', 'DO', 'EE', 'EG', 'ES', 'FI', 'FO', 'FR',
+    'GB', 'GE', 'GI', 'GL', 'GR', 'GT', 'HR', 'HU',
+    'IE', 'IL', 'IQ', 'IR', 'IS', 'IT', 'JO', 'KW',
+    'KZ', 'LB', 'LC', 'LI', 'LT', 'LU', 'LV', 'MC',
+    'MD', 'ME', 'MK', 'MR', 'MT', 'MU', 'MZ', 'NL',
+    'NO', 'PK', 'PL', 'PS', 'PT', 'QA', 'RO', 'RS',
+    'SA', 'SC', 'SE', 'SI', 'SK', 'SM', 'SV', 'TL',
+    'TN', 'TR', 'UA', 'VA', 'VG', 'XK'
+  ],
+  default: [Circular *83]
+}
+
+{
+  ACLOCAL_PATH: '/mingw64/share/aclocal:/usr/share/aclocal',
+  ALLUSERSPROFILE: 'C:\\ProgramData',
+  APPDATA: 'C:\\Users\\sisac\\AppData\\Roaming',
+  ChocolateyInstall: 'C:\\ProgramData\\chocolatey',
+  ChocolateyLastPathUpdate: '132861843559053611',
+  CHROME_CRASHPAD_PIPE_NAME: '\\\\.\\pipe\\crashpad_1808_YZSBIBJCCDKNPVHF',
+  COLORTERM: 'truecolor',
+  COMMONPROGRAMFILES: 'C:\\Program Files\\Common Files',
+  'CommonProgramFiles(x86)': 'C:\\Program Files (x86)\\Common Files',
+  CommonProgramW6432: 'C:\\Program Files\\Common Files',
+  COMPUTERNAME: 'LAPTOP-QFV6T82M',
+  COMSPEC: 'C:\\WINDOWS\\system32\\cmd.exe',
+  CONFIG_SITE: '/etc/config.site',
+  DISPLAY: 'needs-to-be-defined',
+  DriverData: 'C:\\Windows\\System32\\Drivers\\DriverData',
+  EXEPATH: 'C:\\Program Files\\Git\\bin',
+  GIT_ASKPASS: 'c:\\Users\\sisac\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh',
+  HOME: 'C:\\Users\\sisac',
+  HOMEDRIVE: 'C:',
+  HOMEPATH: '\\Users\\sisac',
+  HOSTNAME: 'LAPTOP-QFV6T82M',
+  INFOPATH: '/usr/local/info:/usr/share/info:/usr/info:/share/info',
+  LANG: 'en_GB.UTF-8',
+  LOCALAPPDATA: 'C:\\Users\\sisac\\AppData\\Local',
+  LOGONSERVER: '\\\\LAPTOP-QFV6T82M',
+  MANPATH: '/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man',
+  MINGW_CHOST: 'x86_64-w64-mingw32',
+  MINGW_PACKAGE_PREFIX: 'mingw-w64-x86_64',
+  MINGW_PREFIX: '/mingw64',
+  MSYS: 'enable_pcon',
+  MSYSTEM: 'MINGW64',
+  MSYSTEM_CARCH: 'x86_64',
+  MSYSTEM_CHOST: 'x86_64-w64-mingw32',
+  MSYSTEM_PREFIX: '/mingw64',
+  NUMBER_OF_PROCESSORS: '16',
+  OneDrive: 'C:\\Users\\sisac\\OneDrive',
+  OneDriveConsumer: 'C:\\Users\\sisac\\OneDrive',
+  OnlineServices: 'Online Services',
+  ORIGINAL_PATH: 'C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\sisac\\bin;C:\\Program Files\\Python310\\Scripts;C:\\Prog
+ram Files\\Python310;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\windows\\System32\\Ope
+nSSH;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\
+WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;
+C:\\ProgramData\\chocolatey\\bin;C:\\Users\\sisac\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\sisac\\AppData\\Local\\Programs\\Microsoft VS Code\\bin
+;C:\\Users\\sisac\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\sisac\\AppData\\Roaming\\npm',
+  ORIGINAL_TEMP: '/tmp',
+  ORIGINAL_TMP: '/tmp',
+  ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+  OS: 'Windows_NT',
+  PATH: 'C:\\Users\\sisac\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Fil
+es\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\sisac\\bin;C:\\Program Files\\Python310\\Scripts;C:\\Prog
+ram Files\\Python310;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\windows\\System32\\Ope
+nSSH;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\
+WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;
+C:\\ProgramData\\chocolatey\\bin;C:\\Users\\sisac\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\sisac\\AppData\\Local\\Programs\\Microsoft VS Code\\bin
+;C:\\Users\\sisac\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\sisac\\AppData\\Roaming\\npm;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program File
+s\\Git\\usr\\bin\\core_perl',
+  PATHEXT: '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW',
+  PKG_CONFIG_PATH: '/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig',
+  platformcode: 'M7',
+  PLINK_PROTOCOL: 'ssh',
+  PROCESSOR_ARCHITECTURE: 'AMD64',
+  PROCESSOR_IDENTIFIER: 'Intel64 Family 6 Model 141 Stepping 1, GenuineIntel',
+  PROCESSOR_LEVEL: '6',
+  PROCESSOR_REVISION: '8d01',
+  ProgramData: 'C:\\ProgramData',
+  PROGRAMFILES: 'C:\\Program Files',
+  'ProgramFiles(x86)': 'C:\\Program Files (x86)',
+  ProgramW6432: 'C:\\Program Files',
+  PS1: '\\[\\033]0;$TITLEPREFIX:$PWD\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$
+ ',
+  PSModulePath: 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules',
+  PUBLIC: 'C:\\Users\\Public',
+  PWD: '/c/Users/sisac/dev_workspace/appleseeds-bootcamp/udemy/nodejs/code-alongs/notes-app',
+  RegionCode: 'EMEA',
+  SESSIONNAME: 'Console',
+  SHELL: 'C:\\Program Files\\Git\\usr\\bin\\bash.exe',
+  SHLVL: '1',
+  SSH_ASKPASS: '/mingw64/bin/git-askpass.exe',
+  SYSTEMDRIVE: 'C:',
+  SYSTEMROOT: 'C:\\WINDOWS',
+  TEMP: 'C:\\Users\\sisac\\AppData\\Local\\Temp',
+  TERM_PROGRAM: 'vscode',
+  TERM_PROGRAM_VERSION: '1.63.2',
+  TMP: 'C:\\Users\\sisac\\AppData\\Local\\Temp',
+  TMPDIR: 'C:\\Users\\sisac\\AppData\\Local\\Temp',
+  USERDOMAIN: 'LAPTOP-QFV6T82M',
+  USERDOMAIN_ROAMINGPROFILE: 'LAPTOP-QFV6T82M',
+  USERNAME: 'sisac',
+  USERPROFILE: 'C:\\Users\\sisac',
+  VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+  VSCODE_GIT_ASKPASS_MAIN: 'c:\\Users\\sisac\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js',
+  VSCODE_GIT_ASKPASS_NODE: 'C:\\Users\\sisac\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe',
+  VSCODE_GIT_IPC_HANDLE: '\\\\.\\pipe\\vscode-git-2cdc28ef71-sock',
+  WINDIR: 'C:\\WINDOWS',
+  ZES_ENABLE_SYSMAN: '1',
+  _: '/usr/bin/winpty',
+  __PSLockDownPolicy: '0'
+}

@@ -1,9 +1,3 @@
-const validator = require('validator');
-// import validator from 'validator';
-// const getNotes = require('./notes.js');
-
-validator.isEmail('qwe@cfvgbhnj.org');
-
 const strs = [
     'Object',
     'Function',
@@ -91,13 +85,4 @@ const strs = [
     'SharedArrayBuffer',
     'Atomics',
     'WebAssembly',
-];
-
-console.log(global.globalThis);
-// console.log(Object.getOwnPropertyNames(global));
-console.log(__dirname);
-console.log(__filename);
-
-// const msg = getNotes();
-
-// console.log(msg);
+]; // output of console.log(Object.getOwnPropertyNames(global));
