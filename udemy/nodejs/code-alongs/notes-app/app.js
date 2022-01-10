@@ -64,7 +64,7 @@ yargs.command({
     builder: {
         title: {
             describe: 'Note title',
-            demandOption: true, //means that this is a required argument
+            demandOption: true,
             type: 'string',
         },
     },
