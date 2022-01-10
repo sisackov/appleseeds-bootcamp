@@ -25,7 +25,7 @@ yargs.command({
         },
         password: {
             describe: 'User password',
-            demandOption: false,
+            demandOption: true,
             type: 'string',
         },
     },
@@ -98,14 +98,19 @@ yargs.command({
             demandOption: true,
             type: 'string',
         },
-        password: {
-            describe: 'User password',
+        oldPassword: {
+            describe: 'User old password',
+            demandOption: true,
+            type: 'string',
+        },
+        newPassword: {
+            describe: 'User new password',
             demandOption: true,
             type: 'string',
         },
     },
     handler(argv) {
-        setPassword(argv.id, argv.password);
+        setPassword(argv.id, argv.oldPassword, argv.newPassword);
     },
 });
 

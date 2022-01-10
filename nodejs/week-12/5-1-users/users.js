@@ -78,20 +78,24 @@ const deleteUser = (id) => {
     }
 };
 
-const setPassword = async (id, password) => {
+const setPassword = async (id, oldPassword, newPassword) => {
     const users = loadData();
     const userToUpdate = users.find((user) => user.id === id);
+    const oldHash = await v_to_sha256(oldPassword);
     if (!userToUpdate) {
         console.log(chalk.red('User not found'));
     } else {
-        const hashedPassword = await v_to_sha256(password);
+        const hashedPassword = await v_to_sha256(newPassword);
         if (!hashedPassword) {
-            console.log(chalk.red('Password is not valid'));
+            console.log(chalk.red('New password is not valid'));
+            return;
+        } else if (userToUpdate.password !== oldHash) {
+            console.log(chalk.red('Old password is not correct'));
             return;
         }
         userToUpdate.password = hashedPassword;
         saveData(users);
-        console.log(chalk.inverse.green('User password created'));
+        console.log(chalk.inverse.green('User password updated'));
     }
 };
 
