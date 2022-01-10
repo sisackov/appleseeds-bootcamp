@@ -10,6 +10,20 @@ const addNote = (title, body) => {
     // const duplicateNotes = notes.filter((note) => note.title === title);
     const existingNote = notes.find((note) => note.title === title);
 
+    debugger;
+    /**
+     * to inspect the code we need to run: node inspect app.js ...
+     * then, in Chrome, go to chrome://inspect
+     * Under Remote Target the app.js should appear.
+     * if not, configure the discover network targets to include:
+     * -    localhost:9229
+     * -    127.0.0.1:9229
+     *
+     *
+     * to rerun the program from the debug console we can run: restart
+     * to close the debug console run: .exit
+     */
+
     if (!existingNote) {
         notes.push({
             title: title,
