@@ -1,43 +1,31 @@
+const path = require('path');
 const express = require('express');
 
-// const path = require('path');
-// const livereload = require('livereload');
-// const connectLivereload = require('connect-livereload');
-
-// // open livereload high port and start to watch public directory for changes
-// const liveReloadServer = livereload.createServer();
-// liveReloadServer.watch(path.join(__dirname, 'public'));
-
-// // ping browser on Express boot, once browser has reconnected and handshaken
-// liveReloadServer.server.once('connection', () => {
-//     setTimeout(() => {
-//         liveReloadServer.refresh('/');
-//     }, 100);
-// });
-
 const app = express();
-// app.use(connectLivereload());
+const publicDirectoryPath = path.join(__dirname, '../public');
 
-//get takes 2 arguments:
-//1. the route
-//2. the callback function
+//allows to set a setting for the server to use.
+app.set('view engine', 'hbs');
+app.use(express.static(publicDirectoryPath));
+
 app.get('', (req, res) => {
-    res.send('<h1>Weather</h1>');
-});
-
-app.get('/help', (req, res) => {
-    res.send([
-        {
-            name: 'Andrew',
-        },
-        {
-            name: 'Sarah',
-        },
-    ]);
+    res.render('index', {
+        title: 'Weather',
+        name: 'Andrew Mead',
+    });
 });
 
 app.get('/about', (req, res) => {
-    res.send('<h1>About</h1>');
+    res.render('about', {
+        title: 'About Me',
+        name: 'Andrew Mead',
+    });
+});
+
+app.get('/help', (req, res) => {
+    res.render('help', {
+        helpText: 'This is some helpful text.',
+    });
 });
 
 app.get('/weather', (req, res) => {

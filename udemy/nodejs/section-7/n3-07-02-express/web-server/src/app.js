@@ -2,6 +2,9 @@ const express = require('express');
 
 const app = express();
 
+//get takes 2 arguments:
+//1. the route
+//2. the callback function
 app.get('', (req, res) => {
     res.send('Hello express!');
 });

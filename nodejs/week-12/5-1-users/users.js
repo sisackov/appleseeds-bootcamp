@@ -105,7 +105,7 @@ const loadData = () => {
         const dataJSON = dataBuffer.toString();
         return JSON.parse(dataJSON);
     } catch (e) {
-        return [];
+        return []; //in case file does not exist
     }
 };
 
