@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:oldNum', (req, res) => {
-    const oldNum = +req.params.oldNum;
+    const oldNum = +req.params.oldNum; // + converts string to number
     const newNum = req.body.number;
     if (!newNum) {
         res.status(400).send('Missing new number');
