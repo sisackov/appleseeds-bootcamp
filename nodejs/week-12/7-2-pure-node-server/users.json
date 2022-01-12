@@ -1,0 +1,17 @@
+[
+    {
+        "userId": 1,
+        "userName": "user1",
+        "email": "werty@dfghj.com"
+    },
+    {
+        "userId": 2,
+        "userName": "user2",
+        "email": "vfv@dbgfbdfb.com"
+    },
+    {
+        "userId": 3,
+        "userName": "user3",
+        "email": "bdsyc@ybnusd.org"
+    }
+]
