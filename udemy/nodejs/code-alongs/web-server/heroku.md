@@ -26,7 +26,7 @@ heroku: Press any key to open up the browser to login or q to exit:
 ## create a new app
 
 ```
-heroku create sisackov-udemy-node-weatherapp
+heroku create sisackov-udemy-node-weatherapp(APP_NAME)
 ```
 
 -   this will create a new app and show 2 links:
@@ -53,3 +53,23 @@ git remote -v
 ```
 git push heroku main
 ```
+
+-   if successful, you will see the following:
+
+```
+...
+
+remote: -----> Build succeeded!
+
+...
+
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://sisackov-udemy-node-weatherapp.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/sisackov-udemy-node-weatherapp.git
+ * [new branch]      main -> main
+```
+
+-   if unsuccessful, pray to the Google machine
