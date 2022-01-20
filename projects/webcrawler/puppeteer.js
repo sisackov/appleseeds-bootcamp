@@ -20,49 +20,100 @@ const puppeteer = require('puppeteer');
 // })();
 
 const qbTableHeaders = [
-    'Week',
-    'Opponent',
-    'Result',
-    'Completions',
-    'Pass Attempts',
-    'Pass Yards',
-    'Pass Average',
-    'Pass Touchdowns',
-    'Interceptions',
-    'Sacks',
-    'SackYards',
-    'QB Rating',
-    'Rush Attempts',
-    'Rush Yards',
-    'Rush Average',
-    'Rush Touchdowns',
-    'Fumbles',
-    'Fumbles Lost',
+    'week',
+    'opponent',
+    'result',
+    'completions',
+    'passAttempts',
+    'passYards',
+    'passAverage',
+    'passTouchdowns',
+    'interceptions',
+    'sacks',
+    'sackYards',
+    'qbRating',
+    'rushAttempts',
+    'rushYards',
+    'rushAverage',
+    'rushTouchdowns',
+    'fumbles',
+    'fumblesLost',
+];
+const wrTableHeaders = [
+    'week',
+    'opponent',
+    'result',
+    'receptions',
+    'receivingYards',
+    'receivingAverage',
+    'longestReception',
+    'receivingTouchdowns',
+    'rushingAttempts',
+    'rushingYards',
+    'rushingAverage',
+    'longestRush',
+    'rushingTouchdowns',
+    'fumbles',
+    'fumblesLost',
 ];
 
-async function getTableRows(page, selector) {
-    return page.$$eval(selector, (trs) =>
-        trs.map((tr) => {
-            const tds = [...tr.querySelectorAll('td')];
-            return tds.map((td) => td.textContent);
-        })
-    );
-}
+const rbTableHeaders = [
+    'week',
+    'opponent',
+    'result',
+    'rushingAttempts',
+    'rushingYards',
+    'rushingAverage',
+    'longestRush',
+    'rushingTouchdowns',
+    'receptions',
+    'receivingYards',
+    'receivingAverage',
+    'longestReception',
+    'receivingTouchdowns',
+    'fumbles',
+    'fumblesLost',
+];
 
-async function getPlayerStats(playerName) {
-    const browser = await puppeteer.launch({ headless: false });
+// async function getTableRows(page, selector) {
+//     return page.$$eval(selector, (trs) =>
+//         trs.map((tr) => {
+//             const tds = [...tr.querySelectorAll('td')];
+//             return tds.map((td) => td.textContent);
+//         })
+//     );
+// }
+
+const getTableHeaders = (playerPosition) => {
+    switch (playerPosition) {
+        case 'QB':
+            return qbTableHeaders;
+        case 'WR':
+        case 'TE':
+            return wrTableHeaders;
+        case 'RB':
+            return rbTableHeaders;
+        default:
+            return [];
+    }
+};
+
+async function getPlayerStatsNFL(playerName, playerPosition) {
+    // const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
+    const url = `https://www.nfl.com/players/${playerName}/stats/`;
+    console.log(url);
+
     // Instructs the blank page to navigate a URL
-    await page.goto(`https://www.nfl.com/players/${playerName}/stats/`);
+    await page.goto(url);
 
     // Waits until the `title` meta element is rendered
     await page.waitForSelector('title');
 
-    // const title = await page.title();
-    // console.info(`The title is: ${title}`);
-
-    const selector = '.d3-o-table > tbody > tr ';
+    // const selector = '.d3-o-table > tbody > tr ';
+    const selector = 'table[summary="Recent Games"] > tbody > tr ';
 
     // const table = await page.$$('.d3-o-table > tbody > tr ');
     // console.log(table);
@@ -73,20 +124,25 @@ async function getPlayerStats(playerName) {
         })
     );
 
-    // console.log(tableRows);
+    const tableHeaders = getTableHeaders(playerPosition);
+
     const data = tableRows.map((row) => {
         const rowData = {};
         row.forEach((cell, index) => {
-            rowData[qbTableHeaders[index]] = cell;
+            rowData[tableHeaders[index]] = cell;
         });
+        rowData.year = 2021;
         return rowData;
     });
     console.log(data); //Works!!!
 
-    // await browser.close();
+    await browser.close();
 }
+// getPlayerStatsNFL('tom-brady', 'QB');
+// getPlayerStatsNFL('travis-kelce', 'TE');
+getPlayerStatsNFL('dalvin-cook', 'RB');
+// getPlayerStatsNFL('mike-evans', 'WR');
 
-// getPlayerStats('tom-brady');
 const neededOffensivePositions = ['QB', 'RB', 'WR', 'TE'];
 const playerDataTableHeader = [
     'imageLink',
@@ -99,7 +155,7 @@ const playerDataTableHeader = [
     'college',
 ];
 
-const teamNamesEspn = [
+const espnTeamRosterLinks = [
     'buf/buffalo-bills',
     'mia/miami-dolphins',
     'ne/new-england-patriots',
@@ -133,8 +189,9 @@ const teamNamesEspn = [
     'sea/seattle-seahawks',
     'lar/los-angeles-rams',
 ];
+
 async function getPlayersNameAndPosition(teamName) {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
     // Instructs the blank page to navigate a URL
@@ -165,8 +222,6 @@ async function getPlayersNameAndPosition(teamName) {
         })
     );
 
-    // console.log(tableRows);
-
     const data = tableRows
         .map((row) => {
             const rowData = {};
@@ -189,8 +244,14 @@ async function getPlayersNameAndPosition(teamName) {
         })
         .filter((player) => neededOffensivePositions.includes(player.position));
 
-    console.log(data); //Works!!!
-
-    // await browser.close();
+    await browser.close();
+    return data;
+    // console.log(data); //Works!!!
 }
-getPlayersNameAndPosition(teamNamesEspn[31]);
+
+async function startRun() {
+    const team = await getPlayersNameAndPosition(espnTeamRosterLinks[31]);
+    console.log(team);
+}
+
+// startRun();
