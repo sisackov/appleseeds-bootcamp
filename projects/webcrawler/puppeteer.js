@@ -1,23 +1,4 @@
-const axios = require('axios');
 const puppeteer = require('puppeteer');
-
-// (async () => {
-//     const browser = await puppeteer.launch({ headless: false });
-//     const page = await browser.newPage();
-
-//     // Instructs the blank page to navigate a URL
-//     await page.goto('https://www.nfl.com/players/tom-brady/stats/');
-
-//     // await page.goto('https://pptr.dev');
-
-//     // Waits until the `title` meta element is rendered
-//     await page.waitForSelector('title');
-
-//     const title = await page.title();
-//     console.info(`The title is: ${title}`);
-
-//     await browser.close();
-// })();
 
 const qbTableHeaders = [
     'week',
@@ -75,14 +56,29 @@ const rbTableHeaders = [
     'fumblesLost',
 ];
 
-// async function getTableRows(page, selector) {
-//     return page.$$eval(selector, (trs) =>
-//         trs.map((tr) => {
-//             const tds = [...tr.querySelectorAll('td')];
-//             return tds.map((td) => td.textContent);
-//         })
-//     );
-// }
+const defenseTableHeaders = [
+    'week',
+    'opponent',
+    'result',
+    'sacks',
+    'interceptions',
+    'fumbleRecoveries',
+    'safeties',
+    'defensiveTouchdowns',
+    'defensive2PtReturns',
+    'returnedTouchdowns',
+    'pointsAllowed',
+    'fantasyScore',
+];
+
+async function getTableRows(page, selector) {
+    return page.$$eval(selector, (trs) =>
+        trs.map((tr) => {
+            const tds = [...tr.querySelectorAll('td')];
+            return tds.map((td) => td.textContent || '');
+        })
+    );
+}
 
 const getTableHeaders = (playerPosition) => {
     switch (playerPosition) {
@@ -94,7 +90,7 @@ const getTableHeaders = (playerPosition) => {
         case 'RB':
             return rbTableHeaders;
         default:
-            return [];
+            return qbTableHeaders;
     }
 };
 
@@ -140,7 +136,7 @@ async function getPlayerStatsNFL(playerName, playerPosition) {
 }
 // getPlayerStatsNFL('tom-brady', 'QB');
 // getPlayerStatsNFL('travis-kelce', 'TE');
-getPlayerStatsNFL('dalvin-cook', 'RB');
+// getPlayerStatsNFL('dalvin-cook', 'RB');
 // getPlayerStatsNFL('mike-evans', 'WR');
 
 const neededOffensivePositions = ['QB', 'RB', 'WR', 'TE'];
@@ -249,8 +245,172 @@ async function getPlayersNameAndPosition(teamName) {
     // console.log(data); //Works!!!
 }
 
+const fnflTeams = [
+    {
+        team: 'Buffalo Bills',
+        teamId: '100003',
+    },
+    {
+        team: 'Miami Dolphins',
+        teamId: '100019',
+    },
+    {
+        team: 'New England Patriots',
+        teamId: '100021',
+    },
+    {
+        team: 'New York Jets',
+        teamId: '100024',
+    },
+    {
+        team: 'Baltimore Ravens',
+        teamId: '100002',
+    },
+    {
+        team: 'Cincinnati Bengals',
+        teamId: '100006',
+    },
+    {
+        team: 'Cleveland Browns',
+        teamId: '100007',
+    },
+    {
+        team: 'Pittsburgh Steelers',
+        teamId: '100027',
+    },
+    {
+        team: 'Houston Texans',
+        teamId: '100013',
+    },
+    {
+        team: 'Indianapolis Colts',
+        teamId: '100014',
+    },
+    {
+        team: 'Jacksonville Jaguars',
+        teamId: '100015',
+    },
+    {
+        team: 'Tennessee Titans',
+        teamId: '100012',
+    },
+    {
+        team: 'Denver Broncos',
+        teamId: '100009',
+    },
+    {
+        team: 'Kansas City Chiefs',
+        teamId: '100016',
+    },
+    {
+        team: 'Oakland Raiders',
+        teamId: '100018',
+    },
+    {
+        team: 'Los Angeles Chargers',
+        teamId: '100028',
+    },
+    {
+        team: 'Chicago Bears',
+        teamId: '100005',
+    },
+    {
+        team: 'Detroit Lions',
+        teamId: '100010',
+    },
+    {
+        team: 'Green Bay Packers',
+        teamId: '100011',
+    },
+    {
+        team: 'Minnesota Vikings',
+        teamId: '100020',
+    },
+    {
+        team: 'Dallas Cowboys',
+        teamId: '100008',
+    },
+    {
+        team: 'New York Giants',
+        teamId: '100023',
+    },
+    {
+        team: 'Philadelphia Eagles',
+        teamId: '100025',
+    },
+    {
+        team: 'Washington',
+        teamId: '100032',
+    },
+    {
+        team: 'Atlanta Falcons',
+        teamId: '100001',
+    },
+    {
+        team: 'Carolina Panthers',
+        teamId: '100004',
+    },
+    {
+        team: 'New Orleans Saints',
+        teamId: '100022',
+    },
+    {
+        team: 'Tampa Bay Buccaneers',
+        teamId: '100031',
+    },
+    {
+        team: 'Arizona Cardinals',
+        teamId: '100026',
+    },
+    {
+        team: 'San Francisco 49ers',
+        teamId: '100029',
+    },
+    {
+        team: 'Seattle Seahawks',
+        teamId: '100030',
+    },
+    {
+        team: 'Los Angeles Rams',
+        teamId: '100017',
+    },
+];
+
+async function getTeamDefenseStats(team) {
+    const browser = await puppeteer.launch({ headless: false });
+    const page = await browser.newPage();
+
+    const url = `https://fantasy.nfl.com/players/card?leagueId=0&playerId=${team.teamId}`;
+
+    // Instructs the blank page to navigate a URL
+    await page.goto(url);
+
+    const statsSelector =
+        'div.player-card-season-stats-graph-handle > span.stats';
+    await page.waitForSelector(statsSelector);
+    await page.click(statsSelector);
+
+    const selector = 'table.tableType-weeks > tbody > tr';
+    await page.waitForSelector(selector);
+    let tableRows = await getTableRows(page, selector);
+    tableRows = tableRows.filter(
+        (row) => row.length === defenseTableHeaders.length
+    );
+
+    const data = tableRows.map((row) => {
+        const rowData = {};
+        row.forEach((cell, index) => {
+            rowData[defenseTableHeaders[index]] = cell;
+        });
+        return rowData;
+    });
+
+    await browser.close();
+    return data;
+}
+
 async function startRun() {
-    const team = await getPlayersNameAndPosition(espnTeamRosterLinks[31]);
+    const team = await getTeamDefenseStats(fnflTeams[0]);
     console.log(team);
 }
 
