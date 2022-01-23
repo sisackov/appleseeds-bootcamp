@@ -377,7 +377,7 @@ const fnflTeams = [
 ];
 
 async function getTeamDefenseStats(team) {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
     const url = `https://fantasy.nfl.com/players/card?leagueId=0&playerId=${team.teamId}`;
@@ -409,9 +409,39 @@ async function getTeamDefenseStats(team) {
     return data;
 }
 
+async function getKickerStats(playerName) {
+    const browser = await puppeteer.launch({ headless: false });
+    const page = await browser.newPage();
+
+    const url = `https://www.fantasypros.com/nfl/games/${playerName}.php`;
+
+    // Instructs the blank page to navigate a URL
+    await page.goto(url);
+
+    const selector = 'table.table > tbody > tr';
+    await page.waitForSelector(selector);
+    let tableRows = await getTableRows(page, selector);
+    console.log(tableRows);
+    // tableRows = tableRows.filter(
+    //     (row) => row.length === kickerTableHeaders.length
+    // );
+
+    // const data = tableRows.map((row) => {
+    //     const rowData = {};
+    //     row.forEach((cell, index) => {
+    //         rowData[kickerTableHeaders[index]] = cell;
+    //     });
+    //     return rowData;
+    // });
+
+    // await browser.close();
+    // return data;
+}
+
 async function startRun() {
-    const team = await getTeamDefenseStats(fnflTeams[0]);
+    // const team = await getTeamDefenseStats(fnflTeams[0]);
+    const team = await getKickerStats('nick-folk');
     console.log(team);
 }
 
-// startRun();
+startRun();
