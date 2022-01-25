@@ -22,7 +22,7 @@ function App() {
                 accessToken: res.data.accessToken,
                 refreshToken: res.data.refreshToken,
             });
-            document.cookie = `accessToken=${res.data.accessToken}; path=/`;
+            document.cookie = `accessToken=${res.data.accessToken}; path=/`; //saves token to cookie
             return res.data;
         } catch (err) {
             console.log(err);
@@ -81,7 +81,7 @@ function App() {
         return cookieObject;
     };
 
-    console.log(parseCookie());
+    console.log(parseCookie().accessToken);
 
     return (
         <div className='container'>
