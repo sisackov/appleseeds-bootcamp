@@ -22,12 +22,34 @@ function App() {
                 accessToken: res.data.accessToken,
                 refreshToken: res.data.refreshToken,
             });
+
+            /**
+             * Save the new tokens to localStorage or cookie
+             */
             document.cookie = `accessToken=${res.data.accessToken}; path=/`; //saves token to cookie
+            localStorage.setItem('accessToken', res.data.accessToken); //saves token to localStorage
+
             return res.data;
         } catch (err) {
             console.log(err);
         }
     };
+
+    /**
+     * Extract the access token from localStorage or cookie
+     */
+
+    const accessToken = localStorage.getItem('accessToken');
+    console.log('accessToken: ', accessToken);
+    const parseCookie = () => {
+        const cookieObject = {};
+        document.cookie.split(';').forEach((cookie) => {
+            const [key, value] = cookie.split('=');
+            cookieObject[key.trim()] = value;
+        });
+        return cookieObject;
+    };
+    console.log(parseCookie().accessToken);
 
     const axiosJWT = axios.create();
 
@@ -71,17 +93,6 @@ function App() {
             setError(true);
         }
     };
-
-    const parseCookie = () => {
-        const cookieObject = {};
-        document.cookie.split(';').forEach((cookie) => {
-            const [key, value] = cookie.split('=');
-            cookieObject[key.trim()] = value;
-        });
-        return cookieObject;
-    };
-
-    console.log(parseCookie().accessToken);
 
     return (
         <div className='container'>
