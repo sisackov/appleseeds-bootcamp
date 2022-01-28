@@ -37,11 +37,11 @@ async function getSuperstitions(url, nameSelector, descriptionSelector) {
 }
 
 async function getLinks(page, linkSelector) {
-    await page.waitForSelector(linkSelector);
+    await page.waitForSelector(linkSelector, { timeout: 5000 });
     return page.$$eval(linkSelector, (elems) => elems.map((elem) => elem.href));
 }
 
-async function getRecipeLinks(url, linkSelector, nextPageSelector) {
+async function getRecipeLinks(url, linkSelector, nextPageSelector = null) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
@@ -49,13 +49,18 @@ async function getRecipeLinks(url, linkSelector, nextPageSelector) {
     await page.goto(url);
 
     // Waits until the `title` meta element is rendered
-    await page.waitForSelector('title'); //indicates the page has loaded
+    await page.waitForSelector(linkSelector); //indicates the page has loaded
 
     const links = [];
-    for (let i = 0; i < 10; i++) {
+    if (nextPageSelector) {
+        for (let i = 0; i < 10; i++) {
+            const pageLinks = await getLinks(page, linkSelector);
+            links.push(...pageLinks);
+            await page.click(nextPageSelector);
+        }
+    } else {
         const pageLinks = await getLinks(page, linkSelector);
         links.push(...pageLinks);
-        await page.click(nextPageSelector);
     }
     console.log(links);
     console.log(links.length);
@@ -107,9 +112,13 @@ async function startRun() {
     //     'ul.paging-toolbar li:last-child'
     // );
     // const recipes = await getRecipes(recipeLinks);
-    const recipes = await getRecipeFD([
-        'https://www.foodsdictionary.co.il/Recipes/10980',
-    ]);
+    // const recipes = await getRecipeFD([
+    //     'https://www.foodsdictionary.co.il/Recipes/10980',
+    // ]);
+    const recipeLinks2 = await getRecipeLinks(
+        'https://www.ronyohananov.com/blog/categories/%D7%9E%D7%90%D7%9B%D7%9C%D7%99-%D7%A2%D7%93%D7%95%D7%AA',
+        '#pro-gallery-margin-container  div:nth-child(2) > div > article > div > div > a'
+    );
 
     // const s1 = await getSuperstitions(
     //     'https://www.pitria.com/russian-superstitions',
