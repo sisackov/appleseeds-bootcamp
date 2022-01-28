@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const numericRegExp = new RegExp(/\d+/);
 
 async function getTableRows(page, selector) {
     return page.$$eval(selector, (trs) =>
@@ -81,9 +82,17 @@ async function getRecipeLinks(url, linkSelector, options = {}) {
     const links = [];
     let pageLinks = [];
     if (nextPageSelector) {
-        for (let i = 0; i < 10; i++) {
+        let hasNextPage = true;
+        let pageCount = 0;
+        while (hasNextPage) {
+            console.log('paging# ', pageCount++);
             pageLinks = await getLinks(page, linkSelector);
             links.push(...pageLinks);
+            let npsText = await page.$eval(
+                nextPageSelector,
+                (elem) => elem.textContent
+            );
+            hasNextPage = !numericRegExp.test(npsText);
             await page.click(nextPageSelector);
         }
     } else {
@@ -137,20 +146,20 @@ async function getRecipeFD(recipeLinks) {
 }
 
 async function startRun() {
-    // const recipeLinks = await getRecipeLinks(
-    //     'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
-    //     'div.col > div.col-limit > a',
-    //     { nextPageSelector: 'ul.paging-toolbar li:last-child' }
-    // );
+    const recipeLinks = await getRecipeLinks(
+        'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
+        'div.col > div.col-limit > a',
+        { nextPageSelector: 'ul.paging-toolbar li:last-child' }
+    );
     // const recipes = await getRecipes(recipeLinks);
     // const recipes = await getRecipeFD([
     //     'https://www.foodsdictionary.co.il/Recipes/10980',
     // ]);
-    const recipeLinks2 = await getRecipeLinks(
-        'https://www.ronyohananov.com/blog/categories/%D7%9E%D7%90%D7%9B%D7%9C%D7%99-%D7%A2%D7%93%D7%95%D7%AA',
-        '#pro-gallery-margin-container  div:nth-child(2) > div > article > div > div > a',
-        { isInfiniteScroll: true }
-    );
+    // const recipeLinks2 = await getRecipeLinks(
+    //     'https://www.ronyohananov.com/blog/categories/%D7%9E%D7%90%D7%9B%D7%9C%D7%99-%D7%A2%D7%93%D7%95%D7%AA',
+    //     '#pro-gallery-margin-container  div:nth-child(2) > div > article > div > div > a',
+    //     { isInfiniteScroll: true }
+    // );
 
     // const s1 = await getSuperstitions(
     //     'https://www.pitria.com/russian-superstitions',
