@@ -64,13 +64,52 @@ async function getRecipeLinks(url, linkSelector, nextPageSelector) {
     return links;
 }
 
-async function startRun() {
-    const recipeLinks = await getRecipeLinks(
-        'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
-        'div.col > div.col-limit > a',
-        'ul.paging-toolbar li:last-child'
+async function getRecipeFD(recipeLinks) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+
+    // Instructs the blank page to navigate a URL
+    await page.goto(recipeLinks[0]);
+
+    // Waits until the `title` meta element is rendered
+    await page.waitForSelector('title'); //indicates the page has loaded
+
+    const recipeName = await page.$eval('h1', (elem) => elem.textContent);
+    const ingredients = await page.$$eval(
+        'ul.list-group li:not([class*="sub-title"])',
+        (elems) => {
+            return elems.map((elem) => elem.textContent);
+        }
     );
-    const recipes = await getRecipeLinks('');
+
+    const steps = await page.$$eval('ul.howto-list li', (elems) => {
+        return elems.map((elem) => elem.textContent);
+    });
+    const prepTime = await page.$eval(
+        'ul.recipe-basic-details > li:nth-child(3)',
+        (elem) => elem.textContent
+    );
+
+    await browser.close();
+
+    return {
+        recipeName,
+        ingredients,
+        steps,
+        prepTime,
+    };
+}
+
+async function startRun() {
+    // const recipeLinks = await getRecipeLinks(
+    //     'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
+    //     'div.col > div.col-limit > a',
+    //     'ul.paging-toolbar li:last-child'
+    // );
+    // const recipes = await getRecipes(recipeLinks);
+    const recipes = await getRecipeFD([
+        'https://www.foodsdictionary.co.il/Recipes/10980',
+    ]);
 
     // const s1 = await getSuperstitions(
     //     'https://www.pitria.com/russian-superstitions',
