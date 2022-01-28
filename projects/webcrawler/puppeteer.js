@@ -41,7 +41,31 @@ async function getLinks(page, linkSelector) {
     return page.$$eval(linkSelector, (elems) => elems.map((elem) => elem.href));
 }
 
-async function getRecipeLinks(url, linkSelector, nextPageSelector = null) {
+async function infiniteScrollToBottom(page) {
+    let hasScroll = true;
+    let scrollCount = 0;
+    let previousHeight;
+    while (hasScroll) {
+        try {
+            scrollCount++;
+            console.log('Scrolling...', scrollCount);
+            previousHeight = await page.evaluate('document.body.scrollHeight');
+            await page.evaluate(
+                'window.scrollBy(0, document.body.scrollHeight)'
+            );
+            await page.waitForFunction(
+                `document.body.scrollHeight > ${previousHeight}`,
+                { timeout: 5000 }
+            );
+            await page.waitForTimeout(1000);
+        } catch (e) {
+            console.error('Error in infinite scroll', e.message);
+            hasScroll = false;
+        }
+    }
+}
+
+async function getRecipeLinks(url, linkSelector, options = {}) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
@@ -50,16 +74,23 @@ async function getRecipeLinks(url, linkSelector, nextPageSelector = null) {
 
     // Waits until the `title` meta element is rendered
     await page.waitForSelector(linkSelector); //indicates the page has loaded
+    console.log('Page loaded', url);
+
+    const { nextPageSelector, isInfiniteScroll } = options;
 
     const links = [];
+    let pageLinks = [];
     if (nextPageSelector) {
         for (let i = 0; i < 10; i++) {
-            const pageLinks = await getLinks(page, linkSelector);
+            pageLinks = await getLinks(page, linkSelector);
             links.push(...pageLinks);
             await page.click(nextPageSelector);
         }
     } else {
-        const pageLinks = await getLinks(page, linkSelector);
+        if (isInfiniteScroll) {
+            await infiniteScrollToBottom(page);
+        }
+        pageLinks = await getLinks(page, linkSelector);
         links.push(...pageLinks);
     }
     console.log(links);
@@ -109,7 +140,7 @@ async function startRun() {
     // const recipeLinks = await getRecipeLinks(
     //     'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
     //     'div.col > div.col-limit > a',
-    //     'ul.paging-toolbar li:last-child'
+    //     { nextPageSelector: 'ul.paging-toolbar li:last-child' }
     // );
     // const recipes = await getRecipes(recipeLinks);
     // const recipes = await getRecipeFD([
@@ -117,7 +148,8 @@ async function startRun() {
     // ]);
     const recipeLinks2 = await getRecipeLinks(
         'https://www.ronyohananov.com/blog/categories/%D7%9E%D7%90%D7%9B%D7%9C%D7%99-%D7%A2%D7%93%D7%95%D7%AA',
-        '#pro-gallery-margin-container  div:nth-child(2) > div > article > div > div > a'
+        '#pro-gallery-margin-container  div:nth-child(2) > div > article > div > div > a',
+        { isInfiniteScroll: true }
     );
 
     // const s1 = await getSuperstitions(
