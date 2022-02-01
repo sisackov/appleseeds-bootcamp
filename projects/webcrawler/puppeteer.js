@@ -29,7 +29,7 @@ async function getSuperstitions(url, nameSelector, descriptionSelector) {
         elems.map((elem) => elem.textContent)
     );
     const superstitions = names.map((name, index) => ({
-        name,
+        name: name.toLocaleLowerCase('he'),
         description: descriptions[index],
     }));
     console.log(superstitions);
@@ -115,6 +115,7 @@ async function getRecipeFD(recipeLinks) {
 
     // Instructs the blank page to navigate a URL
     await page.goto(recipeLinks[0]);
+    console.log('Page loaded', recipeLinks[0]);
 
     // Waits until the `title` meta element is rendered
     await page.waitForSelector('title'); //indicates the page has loaded
@@ -126,6 +127,8 @@ async function getRecipeFD(recipeLinks) {
             return elems.map((elem) => elem.textContent);
         }
     );
+    console.log(recipeName);
+    console.log(ingredients);
 
     const steps = await page.$$eval('ul.howto-list li', (elems) => {
         return elems.map((elem) => elem.textContent);
@@ -146,21 +149,20 @@ async function getRecipeFD(recipeLinks) {
 }
 
 async function startRun() {
-    const recipeLinks = await getRecipeLinks(
-        'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
-        'div.col > div.col-limit > a',
-        { nextPageSelector: 'ul.paging-toolbar li:last-child' }
-    );
+    // const recipeLinks = await getRecipeLinks(
+    //     'https://www.foodsdictionary.co.il/tag/ethnic-food-recipes',
+    //     'div.col > div.col-limit > a',
+    //     { nextPageSelector: 'ul.paging-toolbar li:last-child' }
+    // );
     // const recipes = await getRecipes(recipeLinks);
     // const recipes = await getRecipeFD([
     //     'https://www.foodsdictionary.co.il/Recipes/10980',
-    // ]);
+    // ]);console.log(recipes);
     // const recipeLinks2 = await getRecipeLinks(
     //     'https://www.ronyohananov.com/blog/categories/%D7%9E%D7%90%D7%9B%D7%9C%D7%99-%D7%A2%D7%93%D7%95%D7%AA',
     //     '#pro-gallery-margin-container  div:nth-child(2) > div > article > div > div > a',
     //     { isInfiniteScroll: true }
     // );
-
     // const s1 = await getSuperstitions(
     //     'https://www.pitria.com/russian-superstitions',
     //     'h3',
