@@ -73,3 +73,37 @@ To https://git.heroku.com/sisackov-udemy-node-weatherapp.git
 ```
 
 -   if unsuccessful, pray to the Google machine
+
+## set heroku config variables
+
+    -   heroku config:set VARIABLE_NAME=VALUE
+
+## stop heroku
+
+    -   heroku ps:scale web=0
+
+## restart heroku
+
+    -   heroku ps:scale web=1
+    or
+    -   heroku restart
+
+## heroku buildpacks
+
+````
+heroku plugins:install buildpack-registry
+heroku plugins:install buildpacks
+````
+
+````
+heroku buildpacks:add
+````
+
+## heroku rebuild without commit
+
+````
+git commit --allow-empty -m "empty commit"
+git push heroku main
+
+````
+
