@@ -12,14 +12,16 @@ let myCountry = {
     neighbouring countries and a capital called ${this.capital}`);
     },
     checkIsland() {
-        this['isIsland'] = this.neighbours.length ? true : false;
-    }
-}
+        this['isIsland'] = !this.neighbours.length ? true : false;
+    },
+};
 
 /* 3. Call the ‘describe method’. */
 myCountry.describe();
 
 /* 4. Add a method called 'checkIsland' */
-console.log(myCountry.isIsland);//undefined
-myCountry.checkIsland()
-console.log(myCountry.isIsland);//returns value
+console.log(myCountry.isIsland); //undefined
+myCountry.checkIsland();
+console.log(myCountry.isIsland); //returns value
+
+// console.log(myCountry);
