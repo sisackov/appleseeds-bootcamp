@@ -1,7 +1,5 @@
 ````
-alias aws-connect="ssh ec2-user@ec2-3-86-92-246.compute-1.amazonaws.com -i ~/.ssh/aws-ffc-key.pem"
-
-alias aws-connect="ssh ubuntu@ec2-54-159-222-226.compute-1.amazonaws.com -i ~/.ssh/aws-ffc-key.pem"
+alias aws-connect="ssh ubuntu@ec2-3-87-56-15.compute-1.amazonaws.com -i ~/.ssh/aws-ffc-key.pem"
 ````
 
 ````
@@ -128,12 +126,40 @@ export NODE_ENV=development
 npm start &
 ````
 
-
 * * See all running processes
 ````
 ps aux
 ````
 
 ````
+apt-get install nginx
+nano /etc/nginx/sites-enabled/default
 
+    #Change the location section as follows
+
+     location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                #  try_files $uri $uri/ =404;
+
+                proxy_pass http://localhost:5000;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+
+        }
+
+service nginx restart
+
+
+mkdir /etc/nginx/ssl
+openssl genrsa -out /etc/nginx/ssl/custom.key 4096
+openssl genrsa -aes128 -passout pass:1qazxsw2 -out custom.key 4096
+````
+
+````
+npm run server
+npm run client
 ````
