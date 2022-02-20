@@ -1,5 +1,5 @@
 ````
-alias aws-connect="ssh ubuntu@ec2-3-87-56-15.compute-1.amazonaws.com -i ~/.ssh/aws-ffc-key.pem"
+alias aws-connect="ssh ubuntu@ec2-54-234-10-152.compute-1.amazonaws.com -i ~/.ssh/aws-ffc-key.pem"
 ````
 
 ````
