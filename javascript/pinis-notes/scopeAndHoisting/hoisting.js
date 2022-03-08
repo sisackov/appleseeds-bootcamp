@@ -15,7 +15,10 @@
 // function expressions and arrows: depends on var or let/const just like normal variables.
 
 // why create hoisting??
-// creator of js created hoisting so we can use function declarations before we use them this is essential for some programming techniques, some people also think this is more readable.And why they implemented with var variables? Because that was the only way hoisting could be implemented at the time. But in hence sight really bad. But he didn't know js will beocme so big.
+// creator of js created hoisting so we can use function declarations before we use them this is essential for some programming techniques,
+// some people also think this is more readable.And why they implemented with var variables?
+// Because that was the only way hoisting could be implemented at the time. But in hindsight was really bad.
+// But he didn't know js will become so big.
 
 // hoisting with variables
 
@@ -33,10 +36,10 @@ console.log(addArrow);
 console.log(addArrow(2, 3));
 
 function addDecl(a, b) {
-  return a + b;
+    return a + b;
 }
 const addExpr = function (a, b) {
-  return a + b;
+    return a + b;
 };
 
 const addArrow = (a, b) => a + b;
